@@ -1,0 +1,5 @@
+- dragging a text snippet to menubar icon should add it to database (see Cloud app)
+- option-clicking a URL item or annotated URL should copy rather than launch it
+- "launch at login" preference in menu
+- Sparkle updating
+- Simple about screen with dev credits
