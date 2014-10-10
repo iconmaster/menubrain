@@ -13,9 +13,9 @@
 
 - (id)init
 {
-	[super init];
+	if (!(self = [super init])) return nil;
 	stringArray = [[NSMutableArray alloc] init];
-	statusMenu = [[NSMutableArray alloc] init];
+	statusMenu = [[NSMenu alloc] init];
 	BOOL firstRun = YES;
 	return self;
 }
@@ -325,11 +325,11 @@
 	[inputField setStringValue:@""];
 	
 	//Create the NSStatusBar and set its length
-	statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength] retain];
+	statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength];
 			
 	//Sets the images in our NSStatusItem
-	[statusItem setImage:[NSImage imageNamed:@"brain-menulet"]];
-	[statusItem setAlternateImage:[NSImage imageNamed:@"brain-menulet_on"]];
+	[statusItem setImage:[NSImage imageNamed:@"menubarIcon"]];
+	[statusItem setAlternateImage:[NSImage imageNamed:@"menubarIconActive"]];
 	
 	//Tells the NSStatusItem what menu to load
 	[statusItem setMenu:statusMenu];
@@ -345,18 +345,18 @@
 	
 	//Add the Edit... item
 	
-	NSMenuItem *editMenuItem = [[[NSMenuItem alloc] initWithTitle:@"Edit..." 
+	NSMenuItem *editMenuItem = [[NSMenuItem alloc] initWithTitle:@"Edit..." 
 														   action:@selector (showEditWindow)
-													keyEquivalent:@""] autorelease];
+													keyEquivalent:@""];
 	[statusMenu addItem:editMenuItem];
 	editMenuItem.target = self;
 	[editMenuItem setEnabled:YES];
 	
 	//Add the Quit MenuBrain item
 	
-	NSMenuItem *quitMenuItem = [[[NSMenuItem alloc] initWithTitle:@"Quit MenuBrain" 
+	NSMenuItem *quitMenuItem = [[NSMenuItem alloc] initWithTitle:@"Quit MenuBrain" 
 														   action:@selector (terminate:)
-													keyEquivalent:@""] autorelease];
+													keyEquivalent:@""];
 	[statusMenu addItem:quitMenuItem];
 	quitMenuItem.target = NSApp;
 	[quitMenuItem setEnabled:YES];
@@ -378,9 +378,8 @@
 		firstRun = YES;
 		//If the user is new to MenuBrain, give her a little hint
 		NSLog(@"trying to rebuild Get Started menu item.");
-		NSMenuItem *getStartedMenuItem = [[[NSMenuItem alloc] initWithTitle:@"Click on Edit... to get started" 
-																	 action:@""
-															  keyEquivalent:@""] autorelease];
+        NSMenuItem *getStartedMenuItem = [[NSMenuItem alloc] initWithTitle:@"Click on Edit... to get started" action:NULL keyEquivalent:@""];
+        
 		[statusMenu insertItem:getStartedMenuItem
 					   atIndex:0];
 		getStartedMenuItem.target = self;
@@ -436,9 +435,9 @@
 - (void)addMenuBrainMenuItem:(id)newString atIndex:(int)rowIndex {
 	
 	NSString *menuString = [self truncateMenuTitle:newString];
-	NSMenuItem *newMenuItem = [[[NSMenuItem alloc]initWithTitle:menuString
+	NSMenuItem *newMenuItem = [[NSMenuItem alloc]initWithTitle:menuString
 														 action:@selector (copy:)
-												  keyEquivalent:@""] autorelease];
+												  keyEquivalent:@""];
 	[statusMenu insertItem:newMenuItem
 				   atIndex:rowIndex];
 	newMenuItem.target = self;

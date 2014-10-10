@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,13 +11,13 @@
 		5409EA3610A3CA210002EFB6 /* MenuBrainAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5409EA3510A3CA210002EFB6 /* MenuBrainAppDelegate.m */; };
 		5409EA3F10A3CA2E0002EFB6 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5409EA3E10A3CA2E0002EFB6 /* AppController.m */; };
 		5409EA4510A3CAB10002EFB6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5409EA4310A3CAB10002EFB6 /* MainMenu.xib */; };
+		542CD64919E88BAF006CAC7E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 542CD64819E88BAF006CAC7E /* Images.xcassets */; };
 		54BBF00710A6615100080778 /* AXCVHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 54BBF00610A6615100080778 /* AXCVHandler.m */; };
 		54D6321110A9CE3500E6C734 /* brain-menulet_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 54D6320F10A9CE3500E6C734 /* brain-menulet_on.png */; };
 		54D6321210A9CE3500E6C734 /* brain-menulet.png in Resources */ = {isa = PBXBuildFile; fileRef = 54D6321010A9CE3500E6C734 /* brain-menulet.png */; };
 		54E82C4810AF5E8F00BF6AFD /* MenuBrain.icns in Resources */ = {isa = PBXBuildFile; fileRef = 54E82C4710AF5E8F00BF6AFD /* MenuBrain.icns */; };
 		54F7026115A0DBC70095C875 /* brain-menulet_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54F7025F15A0DBC70095C875 /* brain-menulet_on@2x.png */; };
 		54F7026215A0DBC70095C875 /* brain-menulet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54F7026015A0DBC70095C875 /* brain-menulet@2x.png */; };
-		5F9F922615A0BDBA00297A1E /* MenuBrain-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F9F922515A0BDBA00297A1E /* MenuBrain-Info.plist */; };
 		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
 		8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
 		8D15AC310486D014006FF6A4 /* MyDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */; settings = {ATTRIBUTES = (); }; };
@@ -42,6 +42,7 @@
 		5409EA3D10A3CA2E0002EFB6 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		5409EA3E10A3CA2E0002EFB6 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		5409EA4410A3CAB10002EFB6 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		542CD64819E88BAF006CAC7E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MenuBrain/Images.xcassets; sourceTree = "<group>"; };
 		54BBF00510A6615100080778 /* AXCVHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXCVHandler.h; sourceTree = "<group>"; };
 		54BBF00610A6615100080778 /* AXCVHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXCVHandler.m; sourceTree = "<group>"; };
 		54D6320F10A9CE3500E6C734 /* brain-menulet_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brain-menulet_on.png"; sourceTree = "<group>"; };
@@ -131,6 +132,7 @@
 		2A37F4B8FDCFA73011CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				542CD64819E88BAF006CAC7E /* Images.xcassets */,
 				54F7025F15A0DBC70095C875 /* brain-menulet_on@2x.png */,
 				54D6320F10A9CE3500E6C734 /* brain-menulet_on.png */,
 				54F7026015A0DBC70095C875 /* brain-menulet@2x.png */,
@@ -180,10 +182,11 @@
 		2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "the iconmaster";
 			};
 			buildConfigurationList = C05733CB08A9546B00998B17 /* Build configuration list for PBXProject "MenuBrain" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -207,10 +210,10 @@
 				8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */,
 				1DDD582C0DA1D0D100B32029 /* MyDocument.xib in Resources */,
 				5409EA4510A3CAB10002EFB6 /* MainMenu.xib in Resources */,
+				542CD64919E88BAF006CAC7E /* Images.xcassets in Resources */,
 				54D6321110A9CE3500E6C734 /* brain-menulet_on.png in Resources */,
 				54D6321210A9CE3500E6C734 /* brain-menulet.png in Resources */,
 				54E82C4810AF5E8F00BF6AFD /* MenuBrain.icns in Resources */,
-				5F9F922615A0BDBA00297A1E /* MenuBrain-Info.plist in Resources */,
 				54F7026115A0DBC70095C875 /* brain-menulet_on@2x.png in Resources */,
 				54F7026215A0DBC70095C875 /* brain-menulet@2x.png in Resources */,
 			);
@@ -273,6 +276,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -282,9 +288,9 @@
 				GCC_PREFIX_HEADER = MenuBrain_Prefix.pch;
 				INFOPLIST_FILE = "MenuBrain-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = MenuBrain;
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -292,44 +298,48 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = MenuBrain_Prefix.pch;
 				INFOPLIST_FILE = "MenuBrain-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = MenuBrain;
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
 		C05733CC08A9546B00998B17 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
 		C05733CD08A9546B00998B17 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_GC = required;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};

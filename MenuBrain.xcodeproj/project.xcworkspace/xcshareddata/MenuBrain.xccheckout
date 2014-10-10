@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7B2BAF09-469F-4D74-9E65-5ACAF9E5C217</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MenuBrain</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>582B6DBD1C0F07E07E936CD6FD58A17F22DEFF21</key>
+		<string>https://github.com/iconmaster/menubrain.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MenuBrain.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>582B6DBD1C0F07E07E936CD6FD58A17F22DEFF21</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/iconmaster/menubrain.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>582B6DBD1C0F07E07E936CD6FD58A17F22DEFF21</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>582B6DBD1C0F07E07E936CD6FD58A17F22DEFF21</string>
+			<key>IDESourceControlWCCName</key>
+			<string>menubrain</string>
+		</dict>
+	</array>
+</dict>
+</plist>
