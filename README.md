@@ -1,3 +1,7 @@
+[![license](https://img.shields.io/github/license/bpxl-labs/RemoteLayer.svg)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](.github/CONTRIBUTING.md)
+[![Maintenance](https://img.shields.io/maintenance/yes/2020.svg)]()
+
 # menubrain
 
 ### Stupidly Simple
