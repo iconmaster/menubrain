@@ -19,7 +19,14 @@
 	if (!(self = [super init])) return nil;
 	stringArray = [[NSMutableArray alloc] init];
 	statusMenu = [[NSMenu alloc] init];
+    
+    [[NSUserDefaults standardUserDefaults] registerDefaults:@{ @"Separator": @":"}];
+    
 	return self;
+}
+
+- (NSString *)separator {
+    return [[NSUserDefaults standardUserDefaults] valueForKey:@"Separator"];
 }
 
 //the copy to pasteboard method
@@ -44,7 +51,7 @@
 	//test for case 1, simple string
 	if ([self isURL:contents] == NO) {
 		//divide string by colon, if any are present
-		NSArray *stringComponents = [contents componentsSeparatedByString:@":"];
+		NSArray *stringComponents = [contents componentsSeparatedByString:[self separator]];
 		if ([stringComponents count] == 1) {
 			//we're done. this is a simple string.
 			NSLog(@"this is a simple string");
@@ -59,7 +66,7 @@
 	//test for case 2, string with annotation
 	if ([self isURL:contents] == NO) {
 		//divide string by colon, if any are present
-		NSArray *stringComponents = [contents componentsSeparatedByString:@":"];
+		NSArray *stringComponents = [contents componentsSeparatedByString:[self separator]];
 		if ([stringComponents count] >= 2) {
 			contentString = [stringComponents objectAtIndex:1];
 			
@@ -106,7 +113,7 @@
 	//test for case 5, non-launching URL with annotation
 	if ([self isURL:contents] == YES) {
 		//divide string by colon, if any are present
-		NSArray *stringComponents = [contents componentsSeparatedByString:@":"];
+		NSArray *stringComponents = [contents componentsSeparatedByString:[self separator]];
 		if ([stringComponents count] >= 2) {
 			contentString = [stringComponents objectAtIndex:1];
 			
@@ -145,7 +152,7 @@
 	//test for case 6, web URL with annotation
 	if ([self isURL:contents] == YES) {
 		//divide string by colon, if any are present
-		NSArray *stringComponents = [contents componentsSeparatedByString:@":"];
+		NSArray *stringComponents = [contents componentsSeparatedByString:[self separator]];
 		if ([stringComponents count] >= 2) {
 			contentString = [stringComponents objectAtIndex:1];
 			
@@ -659,7 +666,7 @@ static int _moveRow = 0;
 
 - (NSString *)truncateMenuTitle:(id)contents {
 	
-	NSArray *titleComponents = [contents componentsSeparatedByString:@":"];
+	NSArray *titleComponents = [contents componentsSeparatedByString:[self separator]];
 
 	NSString *titleFrontEnd = @"";
 	NSString *titleBackEnd = @"";
@@ -674,7 +681,7 @@ static int _moveRow = 0;
 	} else {
 		//is this an annotation?
 		if ([titleComponents count] >= 2) {
-            divider = @":";
+            divider = [self separator];
 			titleFrontEnd = [titleComponents objectAtIndex:0];
 			titleBackEnd = [titleComponents objectAtIndex:1];
 			if ([titleComponents count] > 2) {
