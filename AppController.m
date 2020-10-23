@@ -9,6 +9,9 @@
 #import "AppController.h"
 #define GifInfoPasteBoard @"GifInfoPasteBoard"
 
+@interface AppController () <NSTableViewDelegate, NSTableViewDataSource>
+@end
+
 @implementation AppController 
 
 - (id)init
@@ -16,7 +19,6 @@
 	if (!(self = [super init])) return nil;
 	stringArray = [[NSMutableArray alloc] init];
 	statusMenu = [[NSMenu alloc] init];
-	BOOL firstRun = YES;
 	return self;
 }
 
@@ -34,11 +36,10 @@
 	
 	//first, collect entire string that corresponds to menu selection
 	NSMenuItem *sentMenuItem = (NSMenuItem *)sender;
-	int stringIndex = [statusMenu indexOfItem:sentMenuItem];
+	NSInteger stringIndex = [statusMenu indexOfItem:sentMenuItem];
 	NSString *contents = [stringArray objectAtIndex:stringIndex];
 	NSLog(@"%@",contents);
 	NSString *contentString = @"";
-	NSString *annotationString = @"";
 	
 	//test for case 1, simple string
 	if ([self isURL:contents] == NO) {
@@ -432,7 +433,7 @@
 	[self refreshAll];
 }
 
-- (void)addMenuBrainMenuItem:(id)newString atIndex:(int)rowIndex {
+- (void)addMenuBrainMenuItem:(NSString *)newString atIndex:(NSInteger)rowIndex {
 	
 	NSString *menuString = [self truncateMenuTitle:newString];
 	NSMenuItem *newMenuItem = [[NSMenuItem alloc]initWithTitle:menuString
@@ -447,9 +448,9 @@
 
 
 - (IBAction)removeString:(id)sender {
-	int row = [tableView selectedRow];
+	NSInteger row = [tableView selectedRow];
 	if (row == -1) {
-		NSLog(@"selection changed to row %i", row);
+        NSLog(@"selection changed to row %li", (long)row);
 		return;
 	} else {
 		[stringArray removeObjectAtIndex:row];
@@ -471,14 +472,14 @@
 
 //Weird code that makes the table view work with NSMutableArray
 
-- (int)numberOfRowsInTableView:(NSTableView *)tv
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)tv
 {
 	return [stringArray count];
 }
 
 - (id)tableView:(NSTableView *)tv
 objectValueForTableColumn:(NSTableColumn *)tableColumn
-			row:(int)row
+			row:(NSInteger)row
 {
 	NSString *v = [stringArray objectAtIndex:row];
 	return v;
@@ -505,9 +506,9 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
 
 - (void)tableViewSelectionDidChange:(NSNotification *)notification
 {
-	int row = [tableView selectedRow];
+	NSInteger row = [tableView selectedRow];
 	if (row == -1) {
-		NSLog(@"selection changed to row %i", row);
+        NSLog(@"selection changed to row %li", (long)row);
 		return;
 	}
 }
@@ -516,19 +517,22 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
 
 static int _moveRow = 0;
 
-- (BOOL)tableView:(NSTableView *)tv writeRows:(NSArray*)rows toPasteboard:(NSPasteboard*)pboard
+- (BOOL)tableView:(NSTableView *)tableView writeRowsWithIndexes:(NSIndexSet *)rowIndexes toPasteboard:(NSPasteboard *)pboard
 {
-	int count = [stringArray count];
-	int rowCount = [rows count];
-	if (count < 2) return NO;
-	
-	[pboard declareTypes:[NSArray arrayWithObject:GifInfoPasteBoard] owner:self];
-	[pboard setPropertyList:rows forType:GifInfoPasteBoard];
-	_moveRow = [[rows objectAtIndex:0]intValue];
-	return YES;
+    NSInteger count = [stringArray count];
+    if (count < 2) return NO;
+    
+    NSArray *rows = [stringArray objectsAtIndexes:rowIndexes];
+    if (rows.count == 0) {
+        return NO;
+    }
+    [pboard declareTypes:[NSArray arrayWithObject:GifInfoPasteBoard] owner:self];
+    [pboard setPropertyList:rows forType:GifInfoPasteBoard];
+    _moveRow = [[rows objectAtIndex:0] intValue];
+    return YES;
 }
 
-- (unsigned int)tableView:(NSTableView*)tv validateDrop:(id <NSDraggingInfo>)info proposedRow:(int)row proposedDropOperation:(NSTableViewDropOperation)op
+- (NSDragOperation)tableView:(NSTableView*)tv validateDrop:(id <NSDraggingInfo>)info proposedRow:(NSInteger)row proposedDropOperation:(NSTableViewDropOperation)op
 {
 	if (row != _moveRow) {
 		if (op==NSTableViewDropAbove) {
@@ -539,7 +543,7 @@ static int _moveRow = 0;
 	return NSDragOperationNone;
 }
 
-- (BOOL)tableView:(NSTableView*)tv acceptDrop:(id <NSDraggingInfo>)info row:(int)row dropOperation:(NSTableViewDropOperation)op
+- (BOOL)tableView:(NSTableView*)tv acceptDrop:(id <NSDraggingInfo>)info row:(NSInteger)row dropOperation:(NSTableViewDropOperation)op
 {
 	BOOL result = (unsigned char) [self tableView:tableView didDepositRow:_moveRow at:(int)row];
 	[self refreshAll];
@@ -582,7 +586,7 @@ static int _moveRow = 0;
 	NSString *folder = @"~/Library/Application Support/MenuBrain/"; 
 	folder = [folder stringByExpandingTildeInPath]; 
 	if ([fileManager fileExistsAtPath: folder] == NO) { 
-		[fileManager createDirectoryAtPath: folder attributes: nil]; 
+        [fileManager createDirectoryAtPath:folder withIntermediateDirectories:YES attributes:@{} error:nil];
 	} 
 	NSString *fileName = @"MenuBrain.menubraindata"; 
 	return [folder stringByAppendingPathComponent: fileName]; 
@@ -619,23 +623,23 @@ static int _moveRow = 0;
 		rootObject = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
 		stringArray = [[NSMutableArray alloc] init];
 		//stringArray = [[stringArray arrayByAddingObjectsFromArray:rootObject]retain];
-		int i;
-		int rootObjectRowCount = [rootObject count];
+        NSInteger i;
+        NSInteger rootObjectRowCount = [rootObject count];
 		for (i=0; i < rootObjectRowCount; i++) {
 			[stringArray insertObject:[rootObject objectAtIndex:i] atIndex:i];
 		}
 		//NSLog(@"first line is %@",[stringArray objectAtIndex:0]);
-		int rowCount = [stringArray count];
+        NSInteger rowCount = [stringArray count];
 		
-		NSLog(@"number of rows to rebuild: %i", rowCount);
+        NSLog(@"number of rows to rebuild: %li", (long)rowCount);
 	}
 	
 
 }
 
 - (void)rebuildMenuAfterLoad {
-	int rowCount = [stringArray count];	
-	int i;
+    NSInteger rowCount = [stringArray count];
+    NSInteger i;
 	for (i=0; i < rowCount; i++) {
 		//Add string to status menu
 		
@@ -670,7 +674,7 @@ static int _moveRow = 0;
 	} else {
 		//is this an annotation?
 		if ([titleComponents count] >= 2) {
-			divider = @":",
+            divider = @":";
 			titleFrontEnd = [titleComponents objectAtIndex:0];
 			titleBackEnd = [titleComponents objectAtIndex:1];
 			if ([titleComponents count] > 2) {
@@ -687,7 +691,7 @@ static int _moveRow = 0;
 	
 	
 	//split the non-annotation into two segments and connect with ellipsis
-		int stringLength = [titleBackEnd length];
+    NSInteger stringLength = [titleBackEnd length];
 		
 		if (stringLength > 60) {
 			titleBackEndOne = [titleBackEnd substringWithRange:NSMakeRange(0, 30)];
