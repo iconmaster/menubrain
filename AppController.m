@@ -3,7 +3,7 @@
 //  MenuBrain
 //
 //  Created by John Marstall on 10/29/09.
-//  Copyright 2009 Alamofire. All rights reserved.
+//  Copyright 2020 John Marstall. All rights reserved.
 //
 
 #import "AppController.h"
@@ -19,6 +19,8 @@
 	if (!(self = [super init])) return nil;
 	stringArray = [[NSMutableArray alloc] init];
 	statusMenu = [[NSMenu alloc] init];
+    annotationSeparator = [[NSString alloc] init];
+    annotationSeparator = @":";
 	return self;
 }
 
@@ -44,7 +46,7 @@
 	//test for case 1, simple string
 	if ([self isURL:contents] == NO) {
 		//divide string by colon, if any are present
-		NSArray *stringComponents = [contents componentsSeparatedByString:@":"];
+		NSArray *stringComponents = [contents componentsSeparatedByString:annotationSeparator];
 		if ([stringComponents count] == 1) {
 			//we're done. this is a simple string.
 			NSLog(@"this is a simple string");
@@ -59,7 +61,7 @@
 	//test for case 2, string with annotation
 	if ([self isURL:contents] == NO) {
 		//divide string by colon, if any are present
-		NSArray *stringComponents = [contents componentsSeparatedByString:@":"];
+		NSArray *stringComponents = [contents componentsSeparatedByString:annotationSeparator];
 		if ([stringComponents count] >= 2) {
 			contentString = [stringComponents objectAtIndex:1];
 			
@@ -67,7 +69,7 @@
 			if ([stringComponents count] > 2) {
 				int i;
 				for (i=2;i<[stringComponents count];i++) {
-					contentString = [NSString stringWithFormat:@"%@:%@", contentString, [stringComponents objectAtIndex:i]];
+					contentString = [NSString stringWithFormat:@"%@%@%@", contentString, annotationSeparator, [stringComponents objectAtIndex:i]];
 				}
 			}
 			
@@ -106,7 +108,7 @@
 	//test for case 5, non-launching URL with annotation
 	if ([self isURL:contents] == YES) {
 		//divide string by colon, if any are present
-		NSArray *stringComponents = [contents componentsSeparatedByString:@":"];
+		NSArray *stringComponents = [contents componentsSeparatedByString:annotationSeparator];
 		if ([stringComponents count] >= 2) {
 			contentString = [stringComponents objectAtIndex:1];
 			
@@ -114,7 +116,7 @@
 			if ([stringComponents count] > 2) {
 				int i;
 				for (i=2;i<[stringComponents count];i++) {
-					contentString = [NSString stringWithFormat:@"%@:%@", contentString, [stringComponents objectAtIndex:i]];
+					contentString = [NSString stringWithFormat:@"%@%@%@", contentString, annotationSeparator, [stringComponents objectAtIndex:i]];
 				}
 			}
 			
@@ -145,7 +147,7 @@
 	//test for case 6, web URL with annotation
 	if ([self isURL:contents] == YES) {
 		//divide string by colon, if any are present
-		NSArray *stringComponents = [contents componentsSeparatedByString:@":"];
+		NSArray *stringComponents = [contents componentsSeparatedByString:annotationSeparator];
 		if ([stringComponents count] >= 2) {
 			contentString = [stringComponents objectAtIndex:1];
 			
@@ -153,7 +155,7 @@
 			if ([stringComponents count] > 2) {
 				int i;
 				for (i=2;i<[stringComponents count];i++) {
-					contentString = [NSString stringWithFormat:@"%@:%@", contentString, [stringComponents objectAtIndex:i]];
+					contentString = [NSString stringWithFormat:@"%@%@%@", contentString, annotationSeparator, [stringComponents objectAtIndex:i]];
 				}
 			}
 			
@@ -231,10 +233,14 @@
 	if ([contents hasPrefix:@"http:///"]) {
 		contents = [contents substringWithRange:NSMakeRange(8, [contents length] - 8)];
 	}
+    
+    if ([contents hasPrefix:@"https:///"]) {
+        contents = [contents substringWithRange:NSMakeRange(9, [contents length] - 9)];
+    }
 	
 	NSURL *URL = nil;
 	
-	if ([contents hasPrefix:@"http://"]) {
+	if ([contents hasPrefix:@"http://"] || [contents hasPrefix:@"https://"]) {
 		NSLog(@"this is a web URL: %@", contents);
 		URL = [NSURL URLWithString:contents];
 	} else {
@@ -659,7 +665,7 @@ static int _moveRow = 0;
 
 - (NSString *)truncateMenuTitle:(id)contents {
 	
-	NSArray *titleComponents = [contents componentsSeparatedByString:@":"];
+	NSArray *titleComponents = [contents componentsSeparatedByString:annotationSeparator];
 
 	NSString *titleFrontEnd = @"";
 	NSString *titleBackEnd = @"";
@@ -674,13 +680,13 @@ static int _moveRow = 0;
 	} else {
 		//is this an annotation?
 		if ([titleComponents count] >= 2) {
-            divider = @":";
+            divider = annotationSeparator;
 			titleFrontEnd = [titleComponents objectAtIndex:0];
 			titleBackEnd = [titleComponents objectAtIndex:1];
 			if ([titleComponents count] > 2) {
 				int i;
 				for (i=2;i<[titleComponents count];i++) {
-					titleBackEnd = [NSString stringWithFormat:@"%@:%@", titleBackEnd, [titleComponents objectAtIndex:i]];
+					titleBackEnd = [NSString stringWithFormat:@"%@%@%@", titleBackEnd, annotationSeparator, [titleComponents objectAtIndex:i]];
 				}
 			}
 		} else {

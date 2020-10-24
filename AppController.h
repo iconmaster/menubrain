@@ -15,6 +15,7 @@
 	IBOutlet NSTableView *tableView;
 	IBOutlet NSTextField *inputField;
 	NSMutableArray *stringArray;
+    NSString *annotationSeparator;
 	
 	IBOutlet NSStatusItem *statusItem;
 	IBOutlet NSMenu *statusMenu;
