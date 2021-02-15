@@ -7,7 +7,7 @@
 //
 
 #import "AppController.h"
-#define GifInfoPasteBoard @"GifInfoPasteBoard"
+#define MenuIntoPasteBoard @"MenuIntoPasteBoard"
 
 @interface AppController () <NSTableViewDelegate, NSTableViewDataSource>
 @end
@@ -348,7 +348,7 @@
 	
 	[tableView registerForDraggedTypes:
 	 
-	 [NSArray arrayWithObject:GifInfoPasteBoard] ];
+	 [NSArray arrayWithObject:MenuIntoPasteBoard] ];
 	
 	//Add the Edit... item
 	
@@ -532,8 +532,8 @@ static int _moveRow = 0;
     if (rows.count == 0) {
         return NO;
     }
-    [pboard declareTypes:[NSArray arrayWithObject:GifInfoPasteBoard] owner:self];
-    [pboard setPropertyList:rows forType:GifInfoPasteBoard];
+    [pboard declareTypes:[NSArray arrayWithObject:MenuIntoPasteBoard] owner:self];
+    [pboard setPropertyList:rows forType:MenuIntoPasteBoard];
     _moveRow = [[rows objectAtIndex:0] intValue];
     return YES;
 }
