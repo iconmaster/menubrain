@@ -7,7 +7,6 @@
 //
 
 #import "AppController.h"
-#define MenuIntoPasteBoard @"MenuIntoPasteBoard"
 
 @interface AppController () <NSTableViewDelegate, NSTableViewDataSource>
 @end
@@ -21,6 +20,7 @@
 	statusMenu = [[NSMenu alloc] init];
     annotationSeparator = [[NSString alloc] init];
     annotationSeparator = @":";
+    
 	return self;
 }
 
@@ -346,9 +346,7 @@
 	[statusItem setHighlightMode:YES];
 	
 	
-	[tableView registerForDraggedTypes:
-	 
-	 [NSArray arrayWithObject:MenuIntoPasteBoard] ];
+	[tableView registerForDraggedTypes: [NSArray arrayWithObject:NSStringPboardType] ];
 	
 	//Add the Edit... item
 	
@@ -440,18 +438,23 @@
 }
 
 - (void)addMenuBrainMenuItem:(NSString *)newString atIndex:(NSInteger)rowIndex {
-	
-	NSString *menuString = [self truncateMenuTitle:newString];
-	NSMenuItem *newMenuItem = [[NSMenuItem alloc]initWithTitle:menuString
-														 action:@selector (copy:)
-												  keyEquivalent:@""];
-	[statusMenu insertItem:newMenuItem
-				   atIndex:rowIndex];
-	newMenuItem.target = self;
-	[newMenuItem setEnabled:YES];
+    
+    NSString *menuString = [self truncateMenuTitle:newString];
+    NSMenuItem *newMenuItem = [[NSMenuItem alloc]initWithTitle:menuString
+                                                         action:@selector (copy:)
+                                                  keyEquivalent:@""];
+    [statusMenu insertItem:newMenuItem
+                   atIndex:rowIndex];
+    newMenuItem.target = self;
+    [newMenuItem setEnabled:YES];
 }
 
+- (void)removeStringAtIndex:(NSInteger)row {
+    [stringArray removeObjectAtIndex:row];
+    [statusMenu removeItemAtIndex:row];
+    [self refreshAll];
 
+}
 
 - (IBAction)removeString:(id)sender {
 	NSInteger row = [tableView selectedRow];
@@ -501,10 +504,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
 	
 	[stringArray replaceObjectAtIndex:rowIndex withObject:anObject];
 	[statusMenu removeItemAtIndex:rowIndex];
-	
 	[self addMenuBrainMenuItem:anObject atIndex:rowIndex];
-	 
-	
 	[self refreshAll];
 	
 }
@@ -521,68 +521,56 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
 
 //Drag and Drop
 
-static int _moveRow = 0;
+- (BOOL)tableView:(NSTableView *)tv writeRowsWithIndexes:(NSIndexSet *)rowIndexes toPasteboard:(NSPasteboard*)pboard {
+    // Copy the row numbers to the pasteboard.
+    NSData *zNSIndexSetData = [NSKeyedArchiver archivedDataWithRootObject:rowIndexes];
 
-- (BOOL)tableView:(NSTableView *)tableView writeRowsWithIndexes:(NSIndexSet *)rowIndexes toPasteboard:(NSPasteboard *)pboard
-{
-    NSInteger count = [stringArray count];
-    if (count < 2) return NO;
-    
-    NSArray *rows = [stringArray objectsAtIndexes:rowIndexes];
-    if (rows.count == 0) {
-        return NO;
-    }
-    [pboard declareTypes:[NSArray arrayWithObject:MenuIntoPasteBoard] owner:self];
-    [pboard setPropertyList:rows forType:MenuIntoPasteBoard];
-    _moveRow = [[rows objectAtIndex:0] intValue];
+    [pboard declareTypes:[NSArray arrayWithObject:NSStringPboardType] owner:self];
+
+
+    [pboard setData:zNSIndexSetData forType:NSStringPboardType];
+
     return YES;
 }
 
-- (NSDragOperation)tableView:(NSTableView*)tv validateDrop:(id <NSDraggingInfo>)info proposedRow:(NSInteger)row proposedDropOperation:(NSTableViewDropOperation)op
-{
-	if (row != _moveRow) {
-		if (op==NSTableViewDropAbove) {
-			return NSDragOperationEvery;
-		}
-		return NSDragOperationNone;
-	}
-	return NSDragOperationNone;
-}
-
-- (BOOL)tableView:(NSTableView*)tv acceptDrop:(id <NSDraggingInfo>)info row:(NSInteger)row dropOperation:(NSTableViewDropOperation)op
-{
-	BOOL result = (unsigned char) [self tableView:tableView didDepositRow:_moveRow at:(int)row];
-	[self refreshAll];
-	return result;
-}
-
-// here we actually do the management of the data model:
-
-- (BOOL)tableView:(NSTableView *)tv didDepositRow:(int)rowToMove at:(int)newPosition
-{
-    if (rowToMove != -1 && newPosition != -1) {
-        id object = [stringArray objectAtIndex:rowToMove];
-        if (newPosition < [stringArray count] - 1) {
-            [stringArray removeObjectAtIndex:rowToMove];
-            [stringArray insertObject:object atIndex:newPosition];
-			[statusMenu removeItemAtIndex:rowToMove];
-			
-			[self addMenuBrainMenuItem:object atIndex:newPosition];
-			
-			
-        } else {
-            [stringArray removeObjectAtIndex:rowToMove];
-            [stringArray addObject:object];
-			[statusMenu removeItemAtIndex:rowToMove];
-			
-			[self addMenuBrainMenuItem:object atIndex:[stringArray count] - 1];
-			
-		
-        }
-        return YES;    // ie reload
-    }
+- (NSDragOperation)tableView:(NSTableView*)tv validateDrop:(id )info proposedRow:(NSInteger)row proposedDropOperation:(NSTableViewDropOperation)op {
+    if (op == NSTableViewDropAbove) {
+        return NSDragOperationEvery;
+      }
     return NO;
 }
+
+- (BOOL)tableView:(NSTableView *)aTableView acceptDrop:(id )info row:(NSInteger)row dropOperation:(NSTableViewDropOperation)operation {
+    // array safety -- target row index cannot exceed largest index or fall below zero
+    if (row < 0) {
+        row = 0;
+    } else if (row > stringArray.count) {
+        row = stringArray.count;
+    }
+    
+    NSPasteboard* pboard = [info draggingPasteboard];
+    NSData* rowData = [pboard dataForType:NSStringPboardType];
+    // we need to re-locate where in stringArray this string was
+    NSIndexSet* rowIndexes = [NSKeyedUnarchiver unarchiveObjectWithData:rowData];
+    NSInteger dragRow = [rowIndexes firstIndex];
+    // dragRow is the former index of the dragged string
+    NSString* draggedString = [stringArray objectAtIndex:dragRow];
+    if (dragRow < row) { //that is, if we're dragging a row downward
+        [stringArray removeObjectAtIndex:dragRow];
+        [stringArray insertObject:draggedString atIndex:MAX(0, row-1)];
+        [tableView selectRowIndexes:[NSIndexSet indexSetWithIndex:MAX(0, row-1)] byExtendingSelection:NO];
+    } else { // dragging a row upward
+        [stringArray removeObjectAtIndex:dragRow];
+        [stringArray insertObject:draggedString atIndex:row];
+        [tableView selectRowIndexes:[NSIndexSet indexSetWithIndex:row] byExtendingSelection:NO];
+    }
+    
+    [self refreshAll];
+
+    return YES;
+}
+
+//End Drag and Drop
 
 //Saving and Loading
 
@@ -664,7 +652,6 @@ static int _moveRow = 0;
 }
 
 - (NSString *)truncateMenuTitle:(id)contents {
-	
 	NSArray *titleComponents = [contents componentsSeparatedByString:annotationSeparator];
 
 	NSString *titleFrontEnd = @"";
