@@ -453,13 +453,14 @@
     [stringArray removeObjectAtIndex:row];
     [statusMenu removeItemAtIndex:row];
     [self refreshAll];
+    
+    insertionPoint--;
 
 }
 
 - (IBAction)removeString:(id)sender {
 	NSInteger row = [tableView selectedRow];
 	if (row == -1) {
-        NSLog(@"selection changed to row %li", (long)row);
 		return;
 	} else {
 		[stringArray removeObjectAtIndex:row];
@@ -477,6 +478,10 @@
 - (void)refreshAll {
 	[self saveDataToDisk];
 	[tableView reloadData];
+    NSInteger numberOfRows = [tableView numberOfRows];
+
+    if (numberOfRows > 0)
+        [tableView scrollRowToVisible:numberOfRows - 1];
 }
 
 //Weird code that makes the table view work with NSMutableArray
@@ -636,17 +641,10 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
     NSInteger i;
 	for (i=0; i < rowCount; i++) {
 		//Add string to status menu
-		
 		NSString *newString = @"";
-		newString = [stringArray objectAtIndex:i]; 
-		
+		newString = [stringArray objectAtIndex:i];
 		[self addMenuBrainMenuItem:newString atIndex:insertionPoint];
-		
-		
-		
 		insertionPoint++;
-		
-		
 	}
 	[self refreshAll];
 }
