@@ -328,7 +328,6 @@
 
 - (void)awakeFromNib
 {
-	insertionPoint = 0;
 	[inputField setStringValue:@""];
 	
 	//Create the NSStatusBar and set its length
@@ -412,9 +411,7 @@
 	
 	//Add string to status menu
 
-	[self insertMenuBrianMenuItem:newString atIndex:insertionPoint];
-	
-	insertionPoint++;
+    [self addMenuBrianMenuItem:newString];
 	
     [self rebuildMenuAfterLoad];
 }
@@ -448,8 +445,6 @@
 
     [self rebuildMenuAfterLoad];
     
-    insertionPoint--;
-
 }
 
 - (IBAction)removeString:(id)sender {
@@ -462,9 +457,6 @@
 
         [self rebuildMenuAfterLoad];
 	}
-	
-	insertionPoint--;
-	
 	
 }
 
@@ -642,7 +634,6 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
 		NSString *newString = @"";
 		newString = [stringArray objectAtIndex:i];
 		[self addMenuBrianMenuItem:newString];
-		insertionPoint++;
 	}
     
     [statusMenu addItem:[NSMenuItem separatorItem]];
