@@ -348,24 +348,6 @@
 	
 	[tableView registerForDraggedTypes: [NSArray arrayWithObject:NSStringPboardType] ];
 	
-	//Add the Edit... item
-	
-	NSMenuItem *editMenuItem = [[NSMenuItem alloc] initWithTitle:@"Edit..." 
-														   action:@selector (showEditWindow)
-													keyEquivalent:@""];
-	[statusMenu addItem:editMenuItem];
-	editMenuItem.target = self;
-	[editMenuItem setEnabled:YES];
-	
-	//Add the Quit MenuBrain item
-	
-	NSMenuItem *quitMenuItem = [[NSMenuItem alloc] initWithTitle:@"Quit MenuBrain" 
-														   action:@selector (terminate:)
-													keyEquivalent:@""];
-	[statusMenu addItem:quitMenuItem];
-	quitMenuItem.target = NSApp;
-	[quitMenuItem setEnabled:YES];
-	
 	//Determine if a MenuBrain file already exists
 	
 	NSFileManager *fileManager = [NSFileManager defaultManager]; 
@@ -430,14 +412,14 @@
 	
 	//Add string to status menu
 
-	[self addMenuBrainMenuItem:newString atIndex:insertionPoint];
+	[self insertMenuBrianMenuItem:newString atIndex:insertionPoint];
 	
 	insertionPoint++;
 	
-	[self refreshAll];
+    [self rebuildMenuAfterLoad];
 }
 
-- (void)addMenuBrainMenuItem:(NSString *)newString atIndex:(NSInteger)rowIndex {
+- (void)insertMenuBrianMenuItem:(NSString *)newString atIndex:(NSInteger)rowIndex {
     
     NSString *menuString = [self truncateMenuTitle:newString];
     NSMenuItem *newMenuItem = [[NSMenuItem alloc]initWithTitle:menuString
@@ -449,10 +431,22 @@
     [newMenuItem setEnabled:YES];
 }
 
+- (void)addMenuBrianMenuItem:(NSString *)newString {
+    
+    NSString *menuString = [self truncateMenuTitle:newString];
+    NSMenuItem *newMenuItem = [[NSMenuItem alloc]initWithTitle:menuString
+                                                         action:@selector (copy:)
+                                                  keyEquivalent:@""];
+    [statusMenu addItem:newMenuItem];
+    newMenuItem.target = self;
+    [newMenuItem setEnabled:YES];
+}
+
 - (void)removeStringAtIndex:(NSInteger)row {
     [stringArray removeObjectAtIndex:row];
     [statusMenu removeItemAtIndex:row];
-    [self refreshAll];
+
+    [self rebuildMenuAfterLoad];
     
     insertionPoint--;
 
@@ -465,7 +459,8 @@
 	} else {
 		[stringArray removeObjectAtIndex:row];
 		[statusMenu removeItemAtIndex:row];
-		[self refreshAll];
+
+        [self rebuildMenuAfterLoad];
 	}
 	
 	insertionPoint--;
@@ -509,9 +504,9 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
 	
 	[stringArray replaceObjectAtIndex:rowIndex withObject:anObject];
 	[statusMenu removeItemAtIndex:rowIndex];
-	[self addMenuBrainMenuItem:anObject atIndex:rowIndex];
-	[self refreshAll];
-	
+	[self insertMenuBrianMenuItem:anObject atIndex:rowIndex];
+
+    [self rebuildMenuAfterLoad];
 }
 
 
@@ -570,7 +565,8 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
         [tableView selectRowIndexes:[NSIndexSet indexSetWithIndex:row] byExtendingSelection:NO];
     }
     
-    [self refreshAll];
+
+    [self rebuildMenuAfterLoad];
 
     return YES;
 }
@@ -637,15 +633,39 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
 }
 
 - (void)rebuildMenuAfterLoad {
+    [statusMenu removeAllItems];
+    
     NSInteger rowCount = [stringArray count];
     NSInteger i;
 	for (i=0; i < rowCount; i++) {
 		//Add string to status menu
 		NSString *newString = @"";
 		newString = [stringArray objectAtIndex:i];
-		[self addMenuBrainMenuItem:newString atIndex:insertionPoint];
+		[self addMenuBrianMenuItem:newString];
 		insertionPoint++;
 	}
+    
+    [statusMenu addItem:[NSMenuItem separatorItem]];
+    
+    //Add the Edit... item
+    
+    NSMenuItem *editMenuItem = [[NSMenuItem alloc] initWithTitle:@"Edit..."
+                                                           action:@selector (showEditWindow)
+                                                    keyEquivalent:@""];
+    [statusMenu addItem:editMenuItem];
+    editMenuItem.target = self;
+    [editMenuItem setEnabled:YES];
+    
+    //Add the Quit MenuBrain item
+    
+    NSMenuItem *quitMenuItem = [[NSMenuItem alloc] initWithTitle:@"Quit MenuBrain"
+                                                           action:@selector (terminate:)
+                                                    keyEquivalent:@""];
+    [statusMenu addItem:quitMenuItem];
+    quitMenuItem.target = NSApp;
+    [quitMenuItem setEnabled:YES];
+    
+    
 	[self refreshAll];
 }
 
