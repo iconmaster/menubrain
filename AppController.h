@@ -3,7 +3,7 @@
 //  MenuBrain
 //
 //  Created by John Marstall on 10/29/09.
-//  Copyright 2009 Alamofire. All rights reserved.
+//  Copyright © 2020 John Marstall. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
@@ -15,12 +15,13 @@
 	IBOutlet NSTableView *tableView;
 	IBOutlet NSTextField *inputField;
 	NSMutableArray *stringArray;
+    NSString *annotationSeparator;
 	
 	IBOutlet NSStatusItem *statusItem;
 	IBOutlet NSMenu *statusMenu;
 	IBOutlet NSPanel *menuBrainWindow;
 	
-	int insertionPoint;
+//	int insertionPoint;
 	BOOL firstRun;
 
 }

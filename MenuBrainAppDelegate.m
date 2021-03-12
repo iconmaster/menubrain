@@ -3,7 +3,7 @@
 //  MenuBrain
 //
 //  Created by John Marstall on 10/29/09.
-//  Copyright 2009 Alamofire. All rights reserved.
+//  Copyright © 2020 John Marstall. All rights reserved.
 //
 
 #import "MenuBrainAppDelegate.h"
