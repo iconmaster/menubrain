@@ -24,7 +24,118 @@
 	return self;
 }
 
-//the copy to pasteboard method
+- (void)awakeFromNib
+{
+    [inputField setStringValue:@""];
+    
+    //Create the NSStatusBar and set its length
+    statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength];
+            
+    //Sets the images in our NSStatusItem
+    [statusItem setImage:[NSImage imageNamed:@"menubarIcon"]];
+    [statusItem setAlternateImage:[NSImage imageNamed:@"menubarIconActive"]];
+    
+    //Tells the NSStatusItem what menu to load
+    [statusItem setMenu:statusMenu];
+    //Sets the tooptip for our item
+    [statusItem setToolTip:@"MenuBrain"];
+    //Enables highlighting
+    [statusItem setHighlightMode:YES];
+    
+    
+    [tableView registerForDraggedTypes: [NSArray arrayWithObject:NSStringPboardType] ];
+    
+    //Determine if a MenuBrain file already exists
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString *folder = @"~/Library/Application Support/MenuBrain/";
+    folder = [folder stringByExpandingTildeInPath];
+    NSString *fileName = @"MenuBrain.menubraindata";
+    NSString *filePath = [folder stringByAppendingPathComponent: fileName];
+    if ([fileManager fileExistsAtPath: filePath] == YES) {
+        NSLog(@"Looks like there's a datafile to load.");
+        firstRun = NO;
+        [self loadDataFromDisk];
+        [self rebuildMenuAfterLoad];
+    } else {
+        NSLog(@"No datafile found.");
+        firstRun = YES;
+        //If the user is new to MenuBrain, give her a little hint
+        NSLog(@"trying to rebuild Get Started menu item.");
+        NSMenuItem *getStartedMenuItem = [[NSMenuItem alloc] initWithTitle:@"Click on Edit... to get started" action:NULL keyEquivalent:@""];
+        
+        [statusMenu insertItem:getStartedMenuItem
+                       atIndex:0];
+        getStartedMenuItem.target = self;
+        [getStartedMenuItem setEnabled:NO];
+    }
+    
+    
+    [self refreshAll];
+                                
+}
+
+- (void)showEditWindow
+{
+    [[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
+    [menuBrainWindow makeKeyAndOrderFront:self];
+    [inputField selectText:self];
+    [[inputField currentEditor] setSelectedRange:NSMakeRange([[inputField stringValue] length], 0)];
+
+}
+
+// Truncating long titles for display
+- (NSString *)truncateMenuTitle:(id)contents {
+    NSArray *titleComponents = [contents componentsSeparatedByString:annotationSeparator];
+
+    NSString *titleFrontEnd = @"";
+    NSString *titleBackEnd = @"";
+    NSString *titleBackEndOne = @"";
+    NSString *titleBackEndTwo = @"";
+    NSString *finalBackEnd = @"";
+    NSString *divider = @"";
+    
+    //URLs aren't annotations
+    if ([self isURL:contents] == YES) {
+        titleBackEnd = contents;
+    } else {
+        //is this an annotation?
+        if ([titleComponents count] >= 2) {
+            divider = annotationSeparator;
+            titleFrontEnd = [titleComponents objectAtIndex:0];
+            titleBackEnd = [titleComponents objectAtIndex:1];
+            if ([titleComponents count] > 2) {
+                int i;
+                for (i=2;i<[titleComponents count];i++) {
+                    titleBackEnd = [NSString stringWithFormat:@"%@%@%@", titleBackEnd, annotationSeparator, [titleComponents objectAtIndex:i]];
+                }
+            }
+        } else {
+            titleBackEnd = [titleComponents objectAtIndex:0];
+        }
+    }
+
+    
+    
+    //split the non-annotation into two segments and connect with ellipsis
+    NSInteger stringLength = [titleBackEnd length];
+        
+        if (stringLength > 60) {
+            titleBackEndOne = [titleBackEnd substringWithRange:NSMakeRange(0, 30)];
+            titleBackEndTwo = [titleBackEnd substringWithRange:NSMakeRange(stringLength - 30, 30)];
+            finalBackEnd = [NSString stringWithFormat:@"%@ … %@", titleBackEndOne, titleBackEndTwo];
+        } else {
+            finalBackEnd = titleBackEnd;
+        }
+
+        
+
+    NSString *completeTitle = [NSString stringWithFormat:@"%@%@%@", titleFrontEnd, divider, finalBackEnd];
+
+    return completeTitle;
+}
+
+// The copy to pasteboard method.
 - (void)copy:(id)sender {
 	
 	//MenuBrain responds differently depending on the data selected. There are 6 possible cases:
@@ -192,6 +303,7 @@
 
 }
 
+// Handling URLs.
 - (BOOL)isURL:(id)contents {
 	//account for URLs containing directories
 	NSArray *stringComponents = [contents componentsSeparatedByString:@"/"];
@@ -264,7 +376,6 @@
 	}
 }
 
-
 - (BOOL)isURLStringCheck:(id)contents {
 	//first, test if it's an email address
 	NSString *emailRegEx =
@@ -325,98 +436,19 @@
 	}
 }
 
-
-- (void)awakeFromNib
-{
-	[inputField setStringValue:@""];
-	
-	//Create the NSStatusBar and set its length
-	statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength];
-			
-	//Sets the images in our NSStatusItem
-	[statusItem setImage:[NSImage imageNamed:@"menubarIcon"]];
-	[statusItem setAlternateImage:[NSImage imageNamed:@"menubarIconActive"]];
-	
-	//Tells the NSStatusItem what menu to load
-	[statusItem setMenu:statusMenu];
-	//Sets the tooptip for our item
-	[statusItem setToolTip:@"MenuBrain"];
-	//Enables highlighting
-	[statusItem setHighlightMode:YES];
-	
-	
-	[tableView registerForDraggedTypes: [NSArray arrayWithObject:NSStringPboardType] ];
-	
-	//Determine if a MenuBrain file already exists
-	
-	NSFileManager *fileManager = [NSFileManager defaultManager]; 
-	NSString *folder = @"~/Library/Application Support/MenuBrain/"; 
-	folder = [folder stringByExpandingTildeInPath]; 
-	NSString *fileName = @"MenuBrain.menubraindata"; 
-	NSString *filePath = [folder stringByAppendingPathComponent: fileName]; 
-	if ([fileManager fileExistsAtPath: filePath] == YES) { 
-		NSLog(@"Looks like there's a datafile to load.");
-		firstRun = NO;
-		[self loadDataFromDisk];
-		[self rebuildMenuAfterLoad];
-	} else {
-		NSLog(@"No datafile found.");
-		firstRun = YES;
-		//If the user is new to MenuBrain, give her a little hint
-		NSLog(@"trying to rebuild Get Started menu item.");
-        NSMenuItem *getStartedMenuItem = [[NSMenuItem alloc] initWithTitle:@"Click on Edit... to get started" action:NULL keyEquivalent:@""];
-        
-		[statusMenu insertItem:getStartedMenuItem
-					   atIndex:0];
-		getStartedMenuItem.target = self;
-		[getStartedMenuItem setEnabled:NO];
-	}
-	
-	
-	[self refreshAll];
-								
+// addMenuBrainMenuItem is the preferred method for adding data to MenuBrain. For drag and drop, insertMenuBrainItem(atIndex:Int) is needed.
+- (void)addMenuBrainMenuItem:(NSString *)newString {
+    
+    NSString *menuString = [self truncateMenuTitle:newString];
+    NSMenuItem *newMenuItem = [[NSMenuItem alloc]initWithTitle:menuString
+                                                         action:@selector (copy:)
+                                                  keyEquivalent:@""];
+    [statusMenu addItem:newMenuItem];
+    newMenuItem.target = self;
+    [newMenuItem setEnabled:YES];
 }
 
-- (void)showEditWindow
-{
-	[[NSApplication sharedApplication] activateIgnoringOtherApps:YES];
-	[menuBrainWindow makeKeyAndOrderFront:self];
-	[inputField selectText:self];
-	[[inputField currentEditor] setSelectedRange:NSMakeRange([[inputField stringValue] length], 0)];	
-
-}
-
-
-
-- (IBAction)addString:(id)sender {
-	
-	NSString *newString = [inputField stringValue];
-	if ([newString length] == 0)
-	{
-		return;
-	}
-	
-	if (firstRun == YES) {
-		//need to remove Getting Started item
-		NSLog(@"trying to remove Getting Started item");
-		[statusMenu removeItemAtIndex:0];
-		firstRun = NO;
-	} else {
-		NSLog(@"not showing as first run.");
-	}
-	
-	[stringArray addObject:newString];
-	NSLog(@"added %@", [stringArray lastObject]);
-	[inputField setStringValue:@""];
-	
-	//Add string to status menu
-
-    [self addMenuBrianMenuItem:newString];
-	
-    [self rebuildMenuAfterLoad];
-}
-
-- (void)insertMenuBrianMenuItem:(NSString *)newString atIndex:(NSInteger)rowIndex {
+- (void)insertMenuBrainMenuItem:(NSString *)newString atIndex:(NSInteger)rowIndex {
     
     NSString *menuString = [self truncateMenuTitle:newString];
     NSMenuItem *newMenuItem = [[NSMenuItem alloc]initWithTitle:menuString
@@ -428,25 +460,36 @@
     [newMenuItem setEnabled:YES];
 }
 
-- (void)addMenuBrianMenuItem:(NSString *)newString {
+// addString is the method called from the Edit window when clicking [+] or hitting Return.
+- (IBAction)addString:(id)sender {
     
-    NSString *menuString = [self truncateMenuTitle:newString];
-    NSMenuItem *newMenuItem = [[NSMenuItem alloc]initWithTitle:menuString
-                                                         action:@selector (copy:)
-                                                  keyEquivalent:@""];
-    [statusMenu addItem:newMenuItem];
-    newMenuItem.target = self;
-    [newMenuItem setEnabled:YES];
-}
+    NSString *newString = [inputField stringValue];
+    if ([newString length] == 0)
+    {
+        return;
+    }
+    
+    if (firstRun == YES) {
+        //need to remove Getting Started item
+        NSLog(@"trying to remove Getting Started item");
+        [statusMenu removeItemAtIndex:0];
+        firstRun = NO;
+    } else {
+        NSLog(@"not showing as first run.");
+    }
+    
+    [stringArray addObject:newString];
+    NSLog(@"added %@", [stringArray lastObject]);
+    [inputField setStringValue:@""];
+    
+    //Add string to status menu
 
-- (void)removeStringAtIndex:(NSInteger)row {
-    [stringArray removeObjectAtIndex:row];
-    [statusMenu removeItemAtIndex:row];
-
+    [self addMenuBrainMenuItem:newString];
+    
     [self rebuildMenuAfterLoad];
-    
 }
 
+// removeString is the method called from the Edit window when hitting Delete.
 - (IBAction)removeString:(id)sender {
 	NSInteger row = [tableView selectedRow];
 	if (row == -1) {
@@ -460,8 +503,53 @@
 	
 }
 
-//After any edit, update the menu, table view, and save the data
+// I'm not sure this is used.
+- (void)removeStringAtIndex:(NSInteger)row {
+    [stringArray removeObjectAtIndex:row];
+    [statusMenu removeItemAtIndex:row];
 
+    [self rebuildMenuAfterLoad];
+    
+}
+
+// rebuildMenuAfterLoad is the preferred method for updating after any addition, deletion or edit. Use it liberally. It calls refreshAll and gets it all done.
+- (void)rebuildMenuAfterLoad {
+    [statusMenu removeAllItems];
+    
+    NSInteger rowCount = [stringArray count];
+    NSInteger i;
+    for (i=0; i < rowCount; i++) {
+        //Add string to status menu
+        NSString *newString = @"";
+        newString = [stringArray objectAtIndex:i];
+        [self addMenuBrainMenuItem:newString];
+    }
+    
+    [statusMenu addItem:[NSMenuItem separatorItem]];
+    
+    //Add the Edit... item
+    
+    NSMenuItem *editMenuItem = [[NSMenuItem alloc] initWithTitle:@"Edit..."
+                                                           action:@selector (showEditWindow)
+                                                    keyEquivalent:@""];
+    [statusMenu addItem:editMenuItem];
+    editMenuItem.target = self;
+    [editMenuItem setEnabled:YES];
+    
+    //Add the Quit MenuBrain item
+    
+    NSMenuItem *quitMenuItem = [[NSMenuItem alloc] initWithTitle:@"Quit MenuBrain"
+                                                           action:@selector (terminate:)
+                                                    keyEquivalent:@""];
+    [statusMenu addItem:quitMenuItem];
+    quitMenuItem.target = NSApp;
+    [quitMenuItem setEnabled:YES];
+    
+    
+    [self refreshAll];
+}
+
+// After any edit, update the menu, table view, and save the data
 - (void)refreshAll {
 	[self saveDataToDisk];
 	[tableView reloadData];
@@ -486,8 +574,6 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
 	return v;
 }
 
-
-
 - (void)tableView:(NSTableView *)aTableView 
    setObjectValue:(id)anObject 
    forTableColumn:(NSTableColumn *)aTableColumn 
@@ -496,7 +582,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
 	
 	[stringArray replaceObjectAtIndex:rowIndex withObject:anObject];
 	[statusMenu removeItemAtIndex:rowIndex];
-	[self insertMenuBrianMenuItem:anObject atIndex:rowIndex];
+	[self insertMenuBrainMenuItem:anObject atIndex:rowIndex];
 
     [self rebuildMenuAfterLoad];
 }
@@ -622,92 +708,6 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
 	}
 	
 
-}
-
-- (void)rebuildMenuAfterLoad {
-    [statusMenu removeAllItems];
-    
-    NSInteger rowCount = [stringArray count];
-    NSInteger i;
-	for (i=0; i < rowCount; i++) {
-		//Add string to status menu
-		NSString *newString = @"";
-		newString = [stringArray objectAtIndex:i];
-		[self addMenuBrianMenuItem:newString];
-	}
-    
-    [statusMenu addItem:[NSMenuItem separatorItem]];
-    
-    //Add the Edit... item
-    
-    NSMenuItem *editMenuItem = [[NSMenuItem alloc] initWithTitle:@"Edit..."
-                                                           action:@selector (showEditWindow)
-                                                    keyEquivalent:@""];
-    [statusMenu addItem:editMenuItem];
-    editMenuItem.target = self;
-    [editMenuItem setEnabled:YES];
-    
-    //Add the Quit MenuBrain item
-    
-    NSMenuItem *quitMenuItem = [[NSMenuItem alloc] initWithTitle:@"Quit MenuBrain"
-                                                           action:@selector (terminate:)
-                                                    keyEquivalent:@""];
-    [statusMenu addItem:quitMenuItem];
-    quitMenuItem.target = NSApp;
-    [quitMenuItem setEnabled:YES];
-    
-    
-	[self refreshAll];
-}
-
-- (NSString *)truncateMenuTitle:(id)contents {
-	NSArray *titleComponents = [contents componentsSeparatedByString:annotationSeparator];
-
-	NSString *titleFrontEnd = @"";
-	NSString *titleBackEnd = @"";
-	NSString *titleBackEndOne = @"";
-	NSString *titleBackEndTwo = @"";
-	NSString *finalBackEnd = @"";
-	NSString *divider = @"";
-	
-	//URLs aren't annotations
-	if ([self isURL:contents] == YES) {
-		titleBackEnd = contents;
-	} else {
-		//is this an annotation?
-		if ([titleComponents count] >= 2) {
-            divider = annotationSeparator;
-			titleFrontEnd = [titleComponents objectAtIndex:0];
-			titleBackEnd = [titleComponents objectAtIndex:1];
-			if ([titleComponents count] > 2) {
-				int i;
-				for (i=2;i<[titleComponents count];i++) {
-					titleBackEnd = [NSString stringWithFormat:@"%@%@%@", titleBackEnd, annotationSeparator, [titleComponents objectAtIndex:i]];
-				}
-			}
-		} else {
-			titleBackEnd = [titleComponents objectAtIndex:0];
-		}
-	}
-
-	
-	
-	//split the non-annotation into two segments and connect with ellipsis
-    NSInteger stringLength = [titleBackEnd length];
-		
-		if (stringLength > 60) {
-			titleBackEndOne = [titleBackEnd substringWithRange:NSMakeRange(0, 30)];
-			titleBackEndTwo = [titleBackEnd substringWithRange:NSMakeRange(stringLength - 30, 30)];
-			finalBackEnd = [NSString stringWithFormat:@"%@ … %@", titleBackEndOne, titleBackEndTwo];
-		} else {
-			finalBackEnd = titleBackEnd;
-		}
-
-		
-
-	NSString *completeTitle = [NSString stringWithFormat:@"%@%@%@", titleFrontEnd, divider, finalBackEnd];
-
-	return completeTitle;
 }
 
 //integrate with Services

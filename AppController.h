@@ -21,7 +21,7 @@
 	IBOutlet NSMenu *statusMenu;
 	IBOutlet NSPanel *menuBrainWindow;
 	
-	int insertionPoint;
+//	int insertionPoint;
 	BOOL firstRun;
 
 }
