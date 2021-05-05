@@ -81,6 +81,7 @@
     [menuBrainWindow makeKeyAndOrderFront:self];
     [inputField selectText:self];
     [[inputField currentEditor] setSelectedRange:NSMakeRange([[inputField stringValue] length], 0)];
+    [tableView sizeLastColumnToFit];
 
 }
 
