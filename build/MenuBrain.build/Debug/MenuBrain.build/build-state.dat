@@ -1,935 +1,0 @@
-TMenuBrain
-v5
-r1
-cCheck dependencies
-cProcessInfoPlistFile /Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Info.plist MenuBrain-Info.plist
-cCompileXIB /Users/jmarstall/bpxl/menubrain/English.lproj/MainMenu.xib
-cCompileXIB /Users/jmarstall/bpxl/menubrain/English.lproj/MyDocument.xib
-cCpResource brain-menulet.png build/Debug/MenuBrain.app/Contents/Resources/brain-menulet.png
-cCpResource English.lproj/Credits.rtf build/Debug/MenuBrain.app/Contents/Resources/English.lproj/Credits.rtf
-cCopyPlistFile /Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Resources/MenuBrain-Info.plist MenuBrain-Info.plist
-cCpResource MenuBrain.icns build/Debug/MenuBrain.app/Contents/Resources/MenuBrain.icns
-cCpResource brain-menulet@2x.png build/Debug/MenuBrain.app/Contents/Resources/brain-menulet@2x.png
-cCpResource brain-menulet_on@2x.png build/Debug/MenuBrain.app/Contents/Resources/brain-menulet_on@2x.png
-cCopyStringsFile /Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
-cCpResource brain-menulet_on.png build/Debug/MenuBrain.app/Contents/Resources/brain-menulet_on.png
-cProcessPCH /var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-adijilcfdlducoagiabnxsspmfhj/MenuBrain_Prefix.pch.pth MenuBrain_Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/MyDocument.o /Users/jmarstall/bpxl/menubrain/MyDocument.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/MenuBrainAppDelegate.o /Users/jmarstall/bpxl/menubrain/MenuBrainAppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/AppController.o /Users/jmarstall/bpxl/menubrain/AppController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/AXCVHandler.o /Users/jmarstall/bpxl/menubrain/AXCVHandler.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/main.o /Users/jmarstall/bpxl/menubrain/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cLd /Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/MacOS/MenuBrain normal x86_64
-cTouch /Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app
-
-N/Applications/Xcode44-DP4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
-c000000004F29C61A00000000000000EE
-t1328137754
-s238
-
-N/Applications/Xcode44-DP4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
-c000000004F9FFA6A00000000000001E5
-t1335884394
-s485
-
-N/Applications/Xcode44-DP6.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
-c000000004F90F72900000000000000CC
-t1334900521
-s204
-
-N/Applications/Xcode44-DP6.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
-c000000004FDCDB8400000000000001E5
-t1339874180
-s485
-
-N/Applications/Xcode45-DP2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
-c000000004F90F72900000000000000CC
-t1334900521
-s204
-
-N/Applications/Xcode45-DP2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
-c0000000040C4AA6800000000000001E5
-t1086630504
-s485
-
-N/System/Library/Frameworks/Cocoa.framework/Cocoa
-c000000004FE8D4E90000000000006730
-t1340658921
-s26416
-
-N/Users/jmarstall/Development/MenuBrain/AXCVHandler.h
-c000000004AF62AF300000000000000CF
-t1257646835
-s207
-
-N/Users/jmarstall/Development/MenuBrain/AXCVHandler.m
-c000000004B00D5130000000000000716
-t1258345747
-s1814
-
-N/Users/jmarstall/Development/MenuBrain/AppController.h
-c000000004AFF4FA9000000000000044F
-t1258246057
-s1103
-
-N/Users/jmarstall/Development/MenuBrain/AppController.m
-c000000004B0819E000000000000050FA
-t1258822112
-s20730
-
-N/Users/jmarstall/Development/MenuBrain/English.lproj/Credits.rtf
-c000000004AF391A800000000000001B4
-t1257476520
-s436
-
-N/Users/jmarstall/Development/MenuBrain/English.lproj/InfoPlist.strings
-c000000004AF99425000000000000002B
-t1257870373
-s43
-
-N/Users/jmarstall/Development/MenuBrain/English.lproj/MainMenu.xib
-c000000004AFF0037000000000000DDEE
-t1258225719
-s56814
-
-N/Users/jmarstall/Development/MenuBrain/English.lproj/MyDocument.xib
-c000000004AF393720000000000005D50
-t1257476978
-s23888
-
-N/Users/jmarstall/Development/MenuBrain/Info.plist
-c000000004AFF6193000000000000077B
-t1258250643
-s1915
-
-N/Users/jmarstall/Development/MenuBrain/MenuBrain.icns
-c000000004AFF26EC0000000000016F9E
-t1258235628
-s94110
-
-N/Users/jmarstall/Development/MenuBrain/MenuBrainAppDelegate.h
-c000000004AFB676D00000000000001D6
-t1257989997
-s470
-
-N/Users/jmarstall/Development/MenuBrain/MenuBrainAppDelegate.m
-c000000004AFB67120000000000000172
-t1257989906
-s370
-
-N/Users/jmarstall/Development/MenuBrain/MenuBrain_Prefix.pch
-c000000004AF391A80000000000000095
-t1257476520
-s149
-i<Cocoa/Cocoa.h>
-
-N/Users/jmarstall/Development/MenuBrain/MyDocument.h
-c000000004AF391A800000000000000CB
-t1257476520
-s203
-
-N/Users/jmarstall/Development/MenuBrain/MyDocument.m
-c000000004AF391A800000000000009E5
-t1257476520
-s2533
-
-N/Users/jmarstall/Development/MenuBrain/brain-menulet.png
-c000000004AF996940000000000000196
-t1257870996
-s406
-
-N/Users/jmarstall/Development/MenuBrain/brain-menulet_on.png
-c000000004AF996A400000000000000C7
-t1257871012
-s199
-
-N/Users/jmarstall/Development/MenuBrain/build/Debug/MenuBrain.app
-t2
-s0
-
-N/Users/jmarstall/Development/MenuBrain/build/Debug/MenuBrain.app/Contents/Info.plist
-t2
-s0
-
-N/Users/jmarstall/Development/MenuBrain/build/Debug/MenuBrain.app/Contents/MacOS/MenuBrain
-t2
-s0
-
-N/Users/jmarstall/Development/MenuBrain/build/Debug/MenuBrain.app/Contents/PkgInfo
-t2
-s0
-
-N/Users/jmarstall/Development/MenuBrain/build/Debug/MenuBrain.app/Contents/Resources/English.lproj/Credits.rtf
-t2
-s0
-
-N/Users/jmarstall/Development/MenuBrain/build/Debug/MenuBrain.app/Contents/Resources/English.lproj/InfoPlist.strings
-t2
-s0
-
-N/Users/jmarstall/Development/MenuBrain/build/Debug/MenuBrain.app/Contents/Resources/English.lproj/MainMenu.nib
-t2
-s0
-
-N/Users/jmarstall/Development/MenuBrain/build/Debug/MenuBrain.app/Contents/Resources/English.lproj/MainMenu.xib
-t2
-s0
-
-N/Users/jmarstall/Development/MenuBrain/build/Debug/MenuBrain.app/Contents/Resources/English.lproj/MyDocument.nib
-t2
-s0
-
-N/Users/jmarstall/Development/MenuBrain/build/Debug/MenuBrain.app/Contents/Resources/English.lproj/MyDocument.xib
-t2
-s0
-
-N/Users/jmarstall/Development/MenuBrain/build/Debug/MenuBrain.app/Contents/Resources/Info.plist
-t2
-s0
-
-N/Users/jmarstall/Development/MenuBrain/build/Debug/MenuBrain.app/Contents/Resources/MenuBrain.icns
-t2
-s0
-
-N/Users/jmarstall/Development/MenuBrain/build/Debug/MenuBrain.app/Contents/Resources/brain-menulet.png
-t2
-s0
-
-N/Users/jmarstall/Development/MenuBrain/build/Debug/MenuBrain.app/Contents/Resources/brain-menulet_on.png
-t2
-s0
-
-N/Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/AXCVHandler.o
-t2
-s0
-
-N/Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/AppController.o
-t2
-s0
-
-N/Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/MenuBrain.LinkFileList
-c000000004FE4C0FA0000000000000256
-t1340391674
-s598
-
-N/Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/MenuBrainAppDelegate.o
-t2
-s0
-
-N/Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/MyDocument.o
-t2
-s0
-
-N/Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/main.o
-t2
-s0
-
-N/Users/jmarstall/Development/MenuBrain/main.m
-c000000004AF391A800000000000000F7
-t1257476520
-s247
-
-N/Users/jmarstall/bpxl/menubrain/AXCVHandler.h
-c000000004AF62AF300000000000000CF
-t1257646835
-s207
-
-N/Users/jmarstall/bpxl/menubrain/AXCVHandler.m
-c000000004B00D5130000000000000716
-t1258345747
-s1814
-
-N/Users/jmarstall/bpxl/menubrain/AppController.h
-c000000004FF59E020000000000000418
-t1341496834
-s1048
-
-N/Users/jmarstall/bpxl/menubrain/AppController.m
-c000000004FF59E02000000000000515F
-t1341496834
-s20831
-
-N/Users/jmarstall/bpxl/menubrain/English.lproj/Credits.rtf
-c000000004AF391A800000000000001B4
-t1257476520
-s436
-
-N/Users/jmarstall/bpxl/menubrain/English.lproj/InfoPlist.strings
-c000000004AF99425000000000000002B
-t1257870373
-s43
-
-N/Users/jmarstall/bpxl/menubrain/English.lproj/MainMenu.xib
-c000000004AFF0037000000000000DDEE
-t1258225719
-s56814
-
-N/Users/jmarstall/bpxl/menubrain/English.lproj/MyDocument.xib
-c000000004AF393720000000000005D50
-t1257476978
-s23888
-
-N/Users/jmarstall/bpxl/menubrain/Info.plist
-c000000004AFF6193000000000000077B
-t1258250643
-s1915
-
-N/Users/jmarstall/bpxl/menubrain/MenuBrain-Info.plist
-c000000004FF0A3E9000000000000081B
-t1341170665
-s2075
-
-N/Users/jmarstall/bpxl/menubrain/MenuBrain.icns
-c000000004E9B9912000000000003C7C0
-t1318820114
-s247744
-
-N/Users/jmarstall/bpxl/menubrain/MenuBrainAppDelegate.h
-c000000004AFB676D00000000000001D6
-t1257989997
-s470
-
-N/Users/jmarstall/bpxl/menubrain/MenuBrainAppDelegate.m
-c000000004AFB67120000000000000172
-t1257989906
-s370
-
-N/Users/jmarstall/bpxl/menubrain/MenuBrain_Prefix.pch
-c000000004AF391A80000000000000095
-t1257476520
-s149
-i<Cocoa/Cocoa.h>
-
-N/Users/jmarstall/bpxl/menubrain/MyDocument.h
-c000000004AF391A800000000000000CB
-t1257476520
-s203
-
-N/Users/jmarstall/bpxl/menubrain/MyDocument.m
-c000000004AF391A800000000000009E5
-t1257476520
-s2533
-
-N/Users/jmarstall/bpxl/menubrain/brain-menulet.png
-c000000004FE4C5340000000000000116
-t1340392756
-s278
-
-N/Users/jmarstall/bpxl/menubrain/brain-menulet@2x.png
-c000000004FE4C54000000000000001DE
-t1340392768
-s478
-
-N/Users/jmarstall/bpxl/menubrain/brain-menulet_on.png
-c000000004AF996A400000000000000C7
-t1257871012
-s199
-
-N/Users/jmarstall/bpxl/menubrain/brain-menulet_on@2x.png
-c000000004FE4C5600000000000000129
-t1340392800
-s297
-
-N/Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app
-t1341170783
-s102
-
-N/Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Info.plist
-t1341170782
-s2407
-
-N/Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/MacOS/MenuBrain
-t1341170783
-s64584
-
-N/Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/PkgInfo
-t1341170782
-s8
-
-N/Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Resources/English.lproj/Credits.rtf
-t1341170782
-s436
-
-N/Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Resources/English.lproj/InfoPlist.strings
-t1340392308
-s88
-
-N/Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Resources/English.lproj/MainMenu.nib
-t1341170782
-s8925
-
-N/Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Resources/English.lproj/MyDocument.nib
-t1341170782
-s877
-
-N/Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Resources/Info.plist
-t1340392308
-s1915
-
-N/Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Resources/MenuBrain-Info.plist
-t1341170782
-s2075
-
-N/Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Resources/MenuBrain.icns
-t1341170782
-s247744
-
-N/Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Resources/brain-menulet.png
-t1341170782
-s278
-
-N/Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Resources/brain-menulet@2x.png
-t1341170782
-s478
-
-N/Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Resources/brain-menulet_on.png
-t1341170782
-s199
-
-N/Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Resources/brain-menulet_on@2x.png
-t1341170782
-s297
-
-N/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/AXCVHandler.o
-t1341170782
-s19436
-
-N/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/AppController.o
-t1341170783
-s83572
-
-N/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/MenuBrain.LinkFileList
-c000000004FE4C3740000000000000233
-t1340392308
-s563
-
-N/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/MenuBrainAppDelegate.o
-t1341170782
-s24772
-
-N/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/MyDocument.o
-t1341170782
-s20096
-
-N/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/main.o
-t1341170782
-s2680
-
-N/Users/jmarstall/bpxl/menubrain/main.m
-c000000004AF391A800000000000000F7
-t1257476520
-s247
-
-N/var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-adijilcfdlducoagiabnxsspmfhj/MenuBrain_Prefix.pch.pth
-t2
-s0
-
-N/var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-bitgdbuptqrxyifyuuzndmbmuila/MenuBrain_Prefix.pch.pth
-t1340392309
-s11632232
-
-N/var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-doyahfhdmlzedcauchlbrsysumks/MenuBrain_Prefix.pch.pth
-t2
-s0
-
-N/var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-fxuacvhofmugsecvhkwqkgtizaen/MenuBrain_Prefix.pch.pth
-t2
-s0
-
-NMenuBrain-Info.plist
-c000000004FF0A3E9000000000000081B
-t1341170665
-s2075
-
-CBuild AST from /Users/jmarstall/Development/MenuBrain/AXCVHandler.m
-r0
-
-CBuild AST from /Users/jmarstall/Development/MenuBrain/AppController.m
-r0
-
-CBuild AST from /Users/jmarstall/Development/MenuBrain/MenuBrainAppDelegate.m
-r0
-
-CBuild AST from /Users/jmarstall/Development/MenuBrain/MyDocument.m
-r0
-
-CBuild AST from /Users/jmarstall/Development/MenuBrain/main.m
-r0
-
-CBuild AST from /Users/jmarstall/bpxl/menubrain/AXCVHandler.m
-r0
-
-CBuild AST from /Users/jmarstall/bpxl/menubrain/AppController.m
-r0
-
-CBuild AST from /Users/jmarstall/bpxl/menubrain/MenuBrainAppDelegate.m
-r0
-
-CBuild AST from /Users/jmarstall/bpxl/menubrain/MyDocument.m
-r0
-
-CBuild AST from /Users/jmarstall/bpxl/menubrain/main.m
-r0
-
-CCheck dependencies
-r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies438cd3e3d5a5b541^3909dde3d5a5b541^-110"Warning: The Copy Bundle Resources build phase contains this target's Info.plist file 'MenuBrain-Info.plist'.1(21%IDEActivityLogMessage2@109"Warning: The Copy Bundle Resources build phase contains this target's Info.plist file 'MenuBrain-Info.plist'.-363189731#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--0#1#0#--18"Check dependencies36"F9C613B8-0E95-49B2-AAB8-5B514C3C6721-
-
-CCompileC build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/AXCVHandler.o /Users/jmarstall/Development/MenuBrain/AXCVHandler.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s362084475.393016
-e362084475.471378
-r1
-xCompileC
-xbuild/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/AXCVHandler.o
-x/Users/jmarstall/Development/MenuBrain/AXCVHandler.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-o/Users/jmarstall/Development/MenuBrain/AXCVHandler.m:36:1: warning: control may reach end of non-void function [-Wreturn-type]
-o}
-o^
-o1 warning generated.
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection60"Compile /Users/jmarstall/Development/MenuBrain/AXCVHandler.m95b6647bf894b541^93ab787bf894b541^-152"/Users/jmarstall/Development/MenuBrain/AXCVHandler.m:36:1: warning: control may reach end of non-void function [-Wreturn-type]}^1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@42"Control may reach end of non-void function-362084475#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@68"file://localhost/Users/jmarstall/Development/MenuBrain/AXCVHandler.m0000000000000000^35#0#35#0#1806#0#14"Semantic Issue--0#0#0#-19%DVTDocumentLocation4@68"file://localhost/Users/jmarstall/Development/MenuBrain/AXCVHandler.m0000000000000000^2797"CompileC build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/AXCVHandler.o AXCVHandler.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jmarstall/Development/MenuBrain    setenv LANG en_US.US-ASCII    /Applications/Xcode44-DP4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode44-DP4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-generated-files.hmap -I/Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-own-target-headers.hmap -I/Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-all-target-headers.hmap -iquote /Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-project-headers.hmap -I/Users/jmarstall/Development/MenuBrain/build/Debug/include -I/Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/DerivedSources/x86_64 -I/Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/DerivedSources -F/Users/jmarstall/Development/MenuBrain/build/Debug -include /var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-fxuacvhofmugsecvhkwqkgtizaen/MenuBrain_Prefix.pch -MMD -MT dependencies -MF /Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/AXCVHandler.d --serialize-diagnostics /Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/AXCVHandler.dia -c /Users/jmarstall/Development/MenuBrain/AXCVHandler.m -o /Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/AXCVHandler.o36"53EDCFFF-5E2C-4EFC-AE4E-F3EFC8D0C646-
-
-CCompileC build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/AXCVHandler.o /Users/jmarstall/bpxl/menubrain/AXCVHandler.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s363189732.677455
-e363189732.751032
-r1
-xCompileC
-xbuild/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/AXCVHandler.o
-x/Users/jmarstall/bpxl/menubrain/AXCVHandler.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-o/Users/jmarstall/bpxl/menubrain/AXCVHandler.m:36:1: warning: control may reach end of non-void function [-Wreturn-type]
-o}
-o^
-o1 warning generated.
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection53"Compile /Users/jmarstall/bpxl/menubrain/AXCVHandler.m0685ade4d5a5b541^af44c0e4d5a5b541^-145"/Users/jmarstall/bpxl/menubrain/AXCVHandler.m:36:1: warning: control may reach end of non-void function [-Wreturn-type]}^1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@42"Control may reach end of non-void function-363189732#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@61"file://localhost/Users/jmarstall/bpxl/menubrain/AXCVHandler.m0000000000000000^35#0#35#0#1806#0#14"Semantic Issue--0#0#0#-19%DVTDocumentLocation4@61"file://localhost/Users/jmarstall/bpxl/menubrain/AXCVHandler.m0000000000000000^2827"CompileC build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/AXCVHandler.o AXCVHandler.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jmarstall/bpxl/menubrain    setenv LANG en_US.US-ASCII    /Applications/Xcode45-DP2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode45-DP2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -fvisibility=hidden -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-generated-files.hmap -I/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-own-target-headers.hmap -I/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-all-target-headers.hmap -iquote /Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-project-headers.hmap -I/Users/jmarstall/bpxl/menubrain/build/Debug/include -I/Applications/Xcode45-DP2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/DerivedSources/x86_64 -I/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/DerivedSources -F/Users/jmarstall/bpxl/menubrain/build/Debug -include /var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-adijilcfdlducoagiabnxsspmfhj/MenuBrain_Prefix.pch -MMD -MT dependencies -MF /Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/AXCVHandler.d --serialize-diagnostics /Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/AXCVHandler.dia -c /Users/jmarstall/bpxl/menubrain/AXCVHandler.m -o /Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/AXCVHandler.o36"13B85476-CAD0-4820-87DB-5843A93AB9E0-
-
-CCompileC build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/AppController.o /Users/jmarstall/Development/MenuBrain/AppController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s362084475.393020
-e362084475.516973
-r1
-xCompileC
-xbuild/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/AppController.o
-x/Users/jmarstall/Development/MenuBrain/AppController.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-o/Users/jmarstall/Development/MenuBrain/AppController.m:18:13: warning: incompatible pointer types assigning to 'NSMenu *' from 'NSMutableArray *' [-Wincompatible-pointer-types]
-o        statusMenu = [[NSMutableArray alloc] init];
-o                   ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-o/Applications/Xcode44-DP4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObject.h:72:1: note: instance method 'init' is assumed to return an instance of its receiver type ('NSMutableArray *')
-o- (id)init;
-o^
-o/Users/jmarstall/Development/MenuBrain/AppController.m:19:7: warning: unused variable 'firstRun' [-Wunused-variable]
-o        BOOL firstRun = YES;
-o             ^
-o/Users/jmarstall/Development/MenuBrain/AppController.m:41:12: warning: unused variable 'annotationString' [-Wunused-variable]
-o        NSString *annotationString = @"";
-o                  ^
-o/Users/jmarstall/Development/MenuBrain/AppController.m:375:26: warning: incompatible pointer types sending 'NSString *' to parameter of type 'SEL' (aka 'SEL *') [-Wincompatible-pointer-types]
-o                                                                                                                                         action:@""
-o                                                                                                                                                ^~~
-o/Applications/Xcode44-DP4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/AppKit.framework/Headers/NSMenuItem.h:72:53: note: passing argument to parameter 'aSelector' here
-o- (id)initWithTitle:(NSString *)aString action:(SEL)aSelector keyEquivalent:(NSString *)charCode;
-o                                                    ^
-o/Users/jmarstall/Development/MenuBrain/AppController.m:516:6: warning: unused variable 'rowCount' [-Wunused-variable]
-o        int rowCount = [rows count];
-o            ^
-o/Users/jmarstall/Development/MenuBrain/AppController.m:579:4: warning: 'createDirectoryAtPath:attributes:' is deprecated [-Wdeprecated-declarations]
-o                [fileManager createDirectoryAtPath: folder attributes: nil]; 
-o                 ^
-o6 warnings generated.
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"Compile /Users/jmarstall/Development/MenuBrain/AppController.mb7b6647bf894b541^bc58847bf894b541^-2230"/Users/jmarstall/Development/MenuBrain/AppController.m:18:13: warning: incompatible pointer types assigning to 'NSMenu *' from 'NSMutableArray *' [-Wincompatible-pointer-types]        statusMenu = [[NSMutableArray alloc] init];                   ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~/Applications/Xcode44-DP4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObject.h:72:1: note: instance method 'init' is assumed to return an instance of its receiver type ('NSMutableArray *')- (id)init;^/Users/jmarstall/Development/MenuBrain/AppController.m:19:7: warning: unused variable 'firstRun' [-Wunused-variable]        BOOL firstRun = YES;             ^/Users/jmarstall/Development/MenuBrain/AppController.m:41:12: warning: unused variable 'annotationString' [-Wunused-variable]        NSString *annotationString = @"";                  ^/Users/jmarstall/Development/MenuBrain/AppController.m:375:26: warning: incompatible pointer types sending 'NSString *' to parameter of type 'SEL' (aka 'SEL *') [-Wincompatible-pointer-types]                                                                                                                                         action:@""                                                                                                                                                ^~~/Applications/Xcode44-DP4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/AppKit.framework/Headers/NSMenuItem.h:72:53: note: passing argument to parameter 'aSelector' here- (id)initWithTitle:(NSString *)aString action:(SEL)aSelector keyEquivalent:(NSString *)charCode;                                                    ^/Users/jmarstall/Development/MenuBrain/AppController.m:516:6: warning: unused variable 'rowCount' [-Wunused-variable]        int rowCount = [rows count];            ^/Users/jmarstall/Development/MenuBrain/AppController.m:579:4: warning: 'createDirectoryAtPath:attributes:' is deprecated [-Wdeprecated-declarations]                [fileManager createDirectoryAtPath: folder attributes: nil];                  ^6 warnings generated.6(36%IDEClangDiagnosticActivityLogMessage2@74"Incompatible pointer types assigning to 'NSMenu *' from 'NSMutableArray *'-362084475#18446744073709551615#0#1(2@97"Instance method 'init' is assumed to return an instance of its receiver type ('NSMutableArray *')-362084475#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@186"file://localhost/Applications/Xcode44-DP4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObject.h0000000000000000^71#0#71#0#1461#0#25"Related Result Type Issue--1#27"com.apple.dt.IDE.diagnostic3@70"file://localhost/Users/jmarstall/Development/MenuBrain/AppController.m0000000000000000^17#12#17#12#329#0#14"Semantic Issue1(3@70"file://localhost/Users/jmarstall/Development/MenuBrain/AppController.m0000000000000000^17#14#17#43#331#28#-2@26"Unused variable 'firstRun'-362084475#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@70"file://localhost/Users/jmarstall/Development/MenuBrain/AppController.m0000000000000000^18#6#18#6#368#0#19"Unused Entity Issue--2@34"Unused variable 'annotationString'-362084475#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@70"file://localhost/Users/jmarstall/Development/MenuBrain/AppController.m0000000000000000^40#11#40#11#1176#0#19"Unused Entity Issue--2@88"Incompatible pointer types sending 'NSString *' to parameter of type 'SEL' (aka 'SEL *')-362084475#18446744073709551615#0#1(2@46"Passing argument to parameter 'aSelector' here-362084475#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@184"file://localhost/Applications/Xcode44-DP4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/AppKit.framework/Headers/NSMenuItem.h0000000000000000^71#52#71#52#1863#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@70"file://localhost/Users/jmarstall/Development/MenuBrain/AppController.m0000000000000000^374#25#374#25#11674#0#14"Semantic Issue1(3@70"file://localhost/Users/jmarstall/Development/MenuBrain/AppController.m0000000000000000^374#25#374#28#11674#1#-2@26"Unused variable 'rowCount'-362084475#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@70"file://localhost/Users/jmarstall/Development/MenuBrain/AppController.m0000000000000000^515#5#515#5#14677#0#19"Unused Entity Issue--2@49"'createDirectoryAtPath:attributes:' is deprecated-362084475#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@70"file://localhost/Users/jmarstall/Development/MenuBrain/AppController.m0000000000000000^578#3#578#3#16661#0#12"Deprecations--0#0#0#-19%DVTDocumentLocation4@70"file://localhost/Users/jmarstall/Development/MenuBrain/AppController.m0000000000000000^2809"CompileC build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/AppController.o AppController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jmarstall/Development/MenuBrain    setenv LANG en_US.US-ASCII    /Applications/Xcode44-DP4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode44-DP4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-generated-files.hmap -I/Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-own-target-headers.hmap -I/Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-all-target-headers.hmap -iquote /Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-project-headers.hmap -I/Users/jmarstall/Development/MenuBrain/build/Debug/include -I/Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/DerivedSources/x86_64 -I/Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/DerivedSources -F/Users/jmarstall/Development/MenuBrain/build/Debug -include /var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-fxuacvhofmugsecvhkwqkgtizaen/MenuBrain_Prefix.pch -MMD -MT dependencies -MF /Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/AppController.d --serialize-diagnostics /Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/AppController.dia -c /Users/jmarstall/Development/MenuBrain/AppController.m -o /Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/AppController.o36"402DCA89-F878-4497-B675-3A3B793295A9-
-
-CCompileC build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/AppController.o /Users/jmarstall/bpxl/menubrain/AppController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s363189732.677387
-e363189732.797979
-r1
-xCompileC
-xbuild/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/AppController.o
-x/Users/jmarstall/bpxl/menubrain/AppController.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-o/Users/jmarstall/bpxl/menubrain/AppController.m:18:13: warning: incompatible pointer types assigning to 'NSMenu *' from 'NSMutableArray *' [-Wincompatible-pointer-types]
-o        statusMenu = [[NSMutableArray alloc] init];
-o                   ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-o/Applications/Xcode45-DP2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObject.h:72:1: note: instance method 'init' is assumed to return an instance of its receiver type ('NSMutableArray *')
-o- (id)init;
-o^
-o/Users/jmarstall/bpxl/menubrain/AppController.m:19:7: warning: unused variable 'firstRun' [-Wunused-variable]
-o        BOOL firstRun = YES;
-o             ^
-o/Users/jmarstall/bpxl/menubrain/AppController.m:41:12: warning: unused variable 'annotationString' [-Wunused-variable]
-o        NSString *annotationString = @"";
-o                  ^
-o/Users/jmarstall/bpxl/menubrain/AppController.m:382:26: warning: incompatible pointer types sending 'NSString *' to parameter of type 'SEL' (aka 'SEL *') [-Wincompatible-pointer-types]
-o                                                                                                                                         action:@""
-o                                                                                                                                                ^~~
-o/Applications/Xcode45-DP2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/AppKit.framework/Headers/NSMenuItem.h:72:53: note: passing argument to parameter 'aSelector' here
-o- (id)initWithTitle:(NSString *)aString action:(SEL)aSelector keyEquivalent:(NSString *)charCode;
-o                                                    ^
-o/Users/jmarstall/bpxl/menubrain/AppController.m:523:6: warning: unused variable 'rowCount' [-Wunused-variable]
-o        int rowCount = [rows count];
-o            ^
-o/Users/jmarstall/bpxl/menubrain/AppController.m:586:4: warning: 'createDirectoryAtPath:attributes:' is deprecated [-Wdeprecated-declarations]
-o                [fileManager createDirectoryAtPath: folder attributes: nil]; 
-o                 ^
-o/Applications/Xcode45-DP2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSFileManager.h:174:1: note: method 'createDirectoryAtPath:attributes:' declared here
-o- (BOOL)createDirectoryAtPath:(NSString *)path attributes:(NSDictionary *)attributes NS_DEPRECATED(10_0, 10_5, 2_0, 2_0);
-o^
-o6 warnings generated.
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection55"Compile /Users/jmarstall/bpxl/menubrain/AppController.m1b84ade4d5a5b541^4948cce4d5a5b541^-2558"/Users/jmarstall/bpxl/menubrain/AppController.m:18:13: warning: incompatible pointer types assigning to 'NSMenu *' from 'NSMutableArray *' [-Wincompatible-pointer-types]        statusMenu = [[NSMutableArray alloc] init];                   ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~/Applications/Xcode45-DP2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObject.h:72:1: note: instance method 'init' is assumed to return an instance of its receiver type ('NSMutableArray *')- (id)init;^/Users/jmarstall/bpxl/menubrain/AppController.m:19:7: warning: unused variable 'firstRun' [-Wunused-variable]        BOOL firstRun = YES;             ^/Users/jmarstall/bpxl/menubrain/AppController.m:41:12: warning: unused variable 'annotationString' [-Wunused-variable]        NSString *annotationString = @"";                  ^/Users/jmarstall/bpxl/menubrain/AppController.m:382:26: warning: incompatible pointer types sending 'NSString *' to parameter of type 'SEL' (aka 'SEL *') [-Wincompatible-pointer-types]                                                                                                                                         action:@""                                                                                                                                                ^~~/Applications/Xcode45-DP2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/AppKit.framework/Headers/NSMenuItem.h:72:53: note: passing argument to parameter 'aSelector' here- (id)initWithTitle:(NSString *)aString action:(SEL)aSelector keyEquivalent:(NSString *)charCode;                                                    ^/Users/jmarstall/bpxl/menubrain/AppController.m:523:6: warning: unused variable 'rowCount' [-Wunused-variable]        int rowCount = [rows count];            ^/Users/jmarstall/bpxl/menubrain/AppController.m:586:4: warning: 'createDirectoryAtPath:attributes:' is deprecated [-Wdeprecated-declarations]                [fileManager createDirectoryAtPath: folder attributes: nil];                  ^/Applications/Xcode45-DP2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSFileManager.h:174:1: note: method 'createDirectoryAtPath:attributes:' declared here- (BOOL)createDirectoryAtPath:(NSString *)path attributes:(NSDictionary *)attributes NS_DEPRECATED(10_0, 10_5, 2_0, 2_0);^6 warnings generated.6(36%IDEClangDiagnosticActivityLogMessage2@74"Incompatible pointer types assigning to 'NSMenu *' from 'NSMutableArray *'-363189732#18446744073709551615#0#1(2@97"Instance method 'init' is assumed to return an instance of its receiver type ('NSMutableArray *')-363189732#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@186"file://localhost/Applications/Xcode45-DP2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObject.h0000000000000000^71#0#71#0#1461#0#25"Related Result Type Issue--1#27"com.apple.dt.IDE.diagnostic3@63"file://localhost/Users/jmarstall/bpxl/menubrain/AppController.m0000000000000000^17#12#17#12#329#0#14"Semantic Issue1(3@63"file://localhost/Users/jmarstall/bpxl/menubrain/AppController.m0000000000000000^17#14#17#43#331#28#-2@26"Unused variable 'firstRun'-363189732#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@63"file://localhost/Users/jmarstall/bpxl/menubrain/AppController.m0000000000000000^18#6#18#6#368#0#19"Unused Entity Issue--2@34"Unused variable 'annotationString'-363189732#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@63"file://localhost/Users/jmarstall/bpxl/menubrain/AppController.m0000000000000000^40#11#40#11#1176#0#19"Unused Entity Issue--2@88"Incompatible pointer types sending 'NSString *' to parameter of type 'SEL' (aka 'SEL *')-363189732#18446744073709551615#0#1(2@46"Passing argument to parameter 'aSelector' here-363189732#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@184"file://localhost/Applications/Xcode45-DP2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/AppKit.framework/Headers/NSMenuItem.h0000000000000000^71#52#71#52#1863#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@63"file://localhost/Users/jmarstall/bpxl/menubrain/AppController.m0000000000000000^381#25#381#25#11775#0#14"Semantic Issue1(3@63"file://localhost/Users/jmarstall/bpxl/menubrain/AppController.m0000000000000000^381#25#381#28#11775#1#-2@26"Unused variable 'rowCount'-363189732#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@63"file://localhost/Users/jmarstall/bpxl/menubrain/AppController.m0000000000000000^522#5#522#5#14778#0#19"Unused Entity Issue--2@49"'createDirectoryAtPath:attributes:' is deprecated-363189732#18446744073709551615#0#1(2@56"Method 'createDirectoryAtPath:attributes:' declared here-363189732#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@191"file://localhost/Applications/Xcode45-DP2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSFileManager.h0000000000000000^173#0#173#0#14023#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@63"file://localhost/Users/jmarstall/bpxl/menubrain/AppController.m0000000000000000^585#3#585#3#16762#0#12"Deprecations--0#0#0#-19%DVTDocumentLocation4@63"file://localhost/Users/jmarstall/bpxl/menubrain/AppController.m0000000000000000^2839"CompileC build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/AppController.o AppController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jmarstall/bpxl/menubrain    setenv LANG en_US.US-ASCII    /Applications/Xcode45-DP2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode45-DP2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -fvisibility=hidden -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-generated-files.hmap -I/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-own-target-headers.hmap -I/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-all-target-headers.hmap -iquote /Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-project-headers.hmap -I/Users/jmarstall/bpxl/menubrain/build/Debug/include -I/Applications/Xcode45-DP2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/DerivedSources/x86_64 -I/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/DerivedSources -F/Users/jmarstall/bpxl/menubrain/build/Debug -include /var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-adijilcfdlducoagiabnxsspmfhj/MenuBrain_Prefix.pch -MMD -MT dependencies -MF /Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/AppController.d --serialize-diagnostics /Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/AppController.dia -c /Users/jmarstall/bpxl/menubrain/AppController.m -o /Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/AppController.o36"F61E9389-02E4-4950-BDC5-3F347EC51AD6-
-
-CCompileC build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/MenuBrainAppDelegate.o /Users/jmarstall/Development/MenuBrain/MenuBrainAppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s362084475.392995
-e362084475.473050
-r1
-xCompileC
-xbuild/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/MenuBrainAppDelegate.o
-x/Users/jmarstall/Development/MenuBrain/MenuBrainAppDelegate.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection69"Compile /Users/jmarstall/Development/MenuBrain/MenuBrainAppDelegate.m7cb8647bf894b541^1519797bf894b541^---0#0#0#-19%DVTDocumentLocation2@77"file://localhost/Users/jmarstall/Development/MenuBrain/MenuBrainAppDelegate.m0000000000000000^2851"CompileC build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/MenuBrainAppDelegate.o MenuBrainAppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jmarstall/Development/MenuBrain    setenv LANG en_US.US-ASCII    /Applications/Xcode44-DP4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode44-DP4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-generated-files.hmap -I/Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-own-target-headers.hmap -I/Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-all-target-headers.hmap -iquote /Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-project-headers.hmap -I/Users/jmarstall/Development/MenuBrain/build/Debug/include -I/Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/DerivedSources/x86_64 -I/Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/DerivedSources -F/Users/jmarstall/Development/MenuBrain/build/Debug -include /var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-fxuacvhofmugsecvhkwqkgtizaen/MenuBrain_Prefix.pch -MMD -MT dependencies -MF /Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/MenuBrainAppDelegate.d --serialize-diagnostics /Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/MenuBrainAppDelegate.dia -c /Users/jmarstall/Development/MenuBrain/MenuBrainAppDelegate.m -o /Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/MenuBrainAppDelegate.o36"ECE69011-58D7-42F4-AC77-B8E35B577954-
-
-CCompileC build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/MenuBrainAppDelegate.o /Users/jmarstall/bpxl/menubrain/MenuBrainAppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s363189732.677331
-e363189732.750656
-r1
-xCompileC
-xbuild/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/MenuBrainAppDelegate.o
-x/Users/jmarstall/bpxl/menubrain/MenuBrainAppDelegate.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"Compile /Users/jmarstall/bpxl/menubrain/MenuBrainAppDelegate.mc284ade4d5a5b541^992ac0e4d5a5b541^---0#0#0#-19%DVTDocumentLocation2@70"file://localhost/Users/jmarstall/bpxl/menubrain/MenuBrainAppDelegate.m0000000000000000^2881"CompileC build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/MenuBrainAppDelegate.o MenuBrainAppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jmarstall/bpxl/menubrain    setenv LANG en_US.US-ASCII    /Applications/Xcode45-DP2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode45-DP2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -fvisibility=hidden -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-generated-files.hmap -I/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-own-target-headers.hmap -I/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-all-target-headers.hmap -iquote /Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-project-headers.hmap -I/Users/jmarstall/bpxl/menubrain/build/Debug/include -I/Applications/Xcode45-DP2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/DerivedSources/x86_64 -I/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/DerivedSources -F/Users/jmarstall/bpxl/menubrain/build/Debug -include /var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-adijilcfdlducoagiabnxsspmfhj/MenuBrain_Prefix.pch -MMD -MT dependencies -MF /Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/MenuBrainAppDelegate.d --serialize-diagnostics /Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/MenuBrainAppDelegate.dia -c /Users/jmarstall/bpxl/menubrain/MenuBrainAppDelegate.m -o /Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/MenuBrainAppDelegate.o36"ED8269C7-245E-4818-962F-350EC69336CB-
-
-CCompileC build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/MyDocument.o /Users/jmarstall/Development/MenuBrain/MyDocument.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s362084475.393028
-e362084475.484604
-r1
-xCompileC
-xbuild/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/MyDocument.o
-x/Users/jmarstall/Development/MenuBrain/MyDocument.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection59"Compile /Users/jmarstall/Development/MenuBrain/MyDocument.mb6ba647bf894b541^d00e7c7bf894b541^---0#0#0#-19%DVTDocumentLocation2@67"file://localhost/Users/jmarstall/Development/MenuBrain/MyDocument.m0000000000000000^2791"CompileC build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/MyDocument.o MyDocument.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jmarstall/Development/MenuBrain    setenv LANG en_US.US-ASCII    /Applications/Xcode44-DP4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode44-DP4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-generated-files.hmap -I/Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-own-target-headers.hmap -I/Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-all-target-headers.hmap -iquote /Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-project-headers.hmap -I/Users/jmarstall/Development/MenuBrain/build/Debug/include -I/Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/DerivedSources/x86_64 -I/Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/DerivedSources -F/Users/jmarstall/Development/MenuBrain/build/Debug -include /var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-fxuacvhofmugsecvhkwqkgtizaen/MenuBrain_Prefix.pch -MMD -MT dependencies -MF /Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/MyDocument.d --serialize-diagnostics /Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/MyDocument.dia -c /Users/jmarstall/Development/MenuBrain/MyDocument.m -o /Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/MyDocument.o36"4EFB0E49-49F2-462E-A14F-6D4C228F0F1A-
-
-CCompileC build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/MyDocument.o /Users/jmarstall/bpxl/menubrain/MyDocument.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s363189732.677305
-e363189732.750671
-r1
-xCompileC
-xbuild/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/MyDocument.o
-x/Users/jmarstall/bpxl/menubrain/MyDocument.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection52"Compile /Users/jmarstall/bpxl/menubrain/MyDocument.m077dade4d5a5b541^022ec0e4d5a5b541^---0#0#0#-19%DVTDocumentLocation2@60"file://localhost/Users/jmarstall/bpxl/menubrain/MyDocument.m0000000000000000^2821"CompileC build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/MyDocument.o MyDocument.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jmarstall/bpxl/menubrain    setenv LANG en_US.US-ASCII    /Applications/Xcode45-DP2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode45-DP2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -fvisibility=hidden -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-generated-files.hmap -I/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-own-target-headers.hmap -I/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-all-target-headers.hmap -iquote /Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-project-headers.hmap -I/Users/jmarstall/bpxl/menubrain/build/Debug/include -I/Applications/Xcode45-DP2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/DerivedSources/x86_64 -I/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/DerivedSources -F/Users/jmarstall/bpxl/menubrain/build/Debug -include /var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-adijilcfdlducoagiabnxsspmfhj/MenuBrain_Prefix.pch -MMD -MT dependencies -MF /Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/MyDocument.d --serialize-diagnostics /Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/MyDocument.dia -c /Users/jmarstall/bpxl/menubrain/MyDocument.m -o /Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/MyDocument.o36"1B1D5637-7BE6-45AF-80CD-03611C360706-
-
-CCompileC build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/main.o /Users/jmarstall/Development/MenuBrain/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s362084475.392991
-e362084475.453439
-r1
-xCompileC
-xbuild/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/main.o
-x/Users/jmarstall/Development/MenuBrain/main.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection53"Compile /Users/jmarstall/Development/MenuBrain/main.m62ba647bf894b541^2f14747bf894b541^---0#0#0#-19%DVTDocumentLocation2@61"file://localhost/Users/jmarstall/Development/MenuBrain/main.m0000000000000000^2755"CompileC build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/main.o main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jmarstall/Development/MenuBrain    setenv LANG en_US.US-ASCII    /Applications/Xcode44-DP4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode44-DP4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-generated-files.hmap -I/Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-own-target-headers.hmap -I/Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-all-target-headers.hmap -iquote /Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-project-headers.hmap -I/Users/jmarstall/Development/MenuBrain/build/Debug/include -I/Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/DerivedSources/x86_64 -I/Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/DerivedSources -F/Users/jmarstall/Development/MenuBrain/build/Debug -include /var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-fxuacvhofmugsecvhkwqkgtizaen/MenuBrain_Prefix.pch -MMD -MT dependencies -MF /Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/main.d --serialize-diagnostics /Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/main.dia -c /Users/jmarstall/Development/MenuBrain/main.m -o /Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/main.o36"44B84A9E-DBBB-454D-BBC4-3254BE72ABA5-
-
-CCompileC build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/main.o /Users/jmarstall/bpxl/menubrain/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s363189732.677472
-e363189732.749654
-r1
-xCompileC
-xbuild/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/main.o
-x/Users/jmarstall/bpxl/menubrain/main.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection46"Compile /Users/jmarstall/bpxl/menubrain/main.mf085ade4d5a5b541^70eabfe4d5a5b541^---0#0#0#-19%DVTDocumentLocation2@54"file://localhost/Users/jmarstall/bpxl/menubrain/main.m0000000000000000^2785"CompileC build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/main.o main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jmarstall/bpxl/menubrain    setenv LANG en_US.US-ASCII    /Applications/Xcode45-DP2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode45-DP2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -fvisibility=hidden -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-generated-files.hmap -I/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-own-target-headers.hmap -I/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-all-target-headers.hmap -iquote /Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-project-headers.hmap -I/Users/jmarstall/bpxl/menubrain/build/Debug/include -I/Applications/Xcode45-DP2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/DerivedSources/x86_64 -I/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/DerivedSources -F/Users/jmarstall/bpxl/menubrain/build/Debug -include /var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-adijilcfdlducoagiabnxsspmfhj/MenuBrain_Prefix.pch -MMD -MT dependencies -MF /Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/main.d --serialize-diagnostics /Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/main.dia -c /Users/jmarstall/bpxl/menubrain/main.m -o /Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/main.o36"4A350F6C-4621-4AD1-8C29-937A93C18FF6-
-
-CCompileXIB /Users/jmarstall/Development/MenuBrain/English.lproj/MainMenu.xib
-s362084474.728555
-e362084474.768516
-r1
-xCompileXIB
-x/Users/jmarstall/Development/MenuBrain/English.lproj/MainMenu.xib
-o/* com.apple.ibtool.document.notices */
-o/Users/jmarstall/Development/MenuBrain/English.lproj/MainMenu.xib:882: note: View is clipping its content [13]
-o/Users/jmarstall/Development/MenuBrain/English.lproj/MainMenu.xib:831: note: View is clipping its content [13]
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Compiling /Users/jmarstall/Development/MenuBrain/English.lproj/MainMenu.xibc592ba7af894b541^dcbdc47af894b541^-262"/* com.apple.ibtool.document.notices *//Users/jmarstall/Development/MenuBrain/English.lproj/MainMenu.xib:882: note: View is clipping its content [13]/Users/jmarstall/Development/MenuBrain/English.lproj/MainMenu.xib:831: note: View is clipping its content [13]2(21%IDEActivityLogMessage2@28"View is clipping its content-362084474#18446744073709551615#0#-0#-23%DVTTextDocumentLocation3@81"file://localhost/Users/jmarstall/Development/MenuBrain/English.lproj/MainMenu.xib0000000000000000^881#18446744073709551615#881#18446744073709551615#18446744073709551615#0#15"Clipped Content--2@28"View is clipping its content-362084474#18446744073709551615#0#-0#-3@81"file://localhost/Users/jmarstall/Development/MenuBrain/English.lproj/MainMenu.xib0000000000000000^830#18446744073709551615#830#18446744073709551615#18446744073709551615#0#15"Clipped Content--0#0#0#-19%DVTDocumentLocation4@81"file://localhost/Users/jmarstall/Development/MenuBrain/English.lproj/MainMenu.xib0000000000000000^612"CompileXIB English.lproj/MainMenu.xib    cd /Users/jmarstall/Development/MenuBrain    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode44-DP4.app/Contents/Developer/usr/bin/..    /Applications/Xcode44-DP4.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/jmarstall/Development/MenuBrain/build/Debug/MenuBrain.app/Contents/Resources/English.lproj/MainMenu.nib /Users/jmarstall/Development/MenuBrain/English.lproj/MainMenu.xib --sdk /Applications/Xcode44-DP4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk36"0F41FA63-9EEE-4499-8AE0-B6BBA9DC7AD8-
-
-CCompileXIB /Users/jmarstall/Development/MenuBrain/English.lproj/MyDocument.xib
-s362084474.728533
-e362084474.756215
-r1
-xCompileXIB
-x/Users/jmarstall/Development/MenuBrain/English.lproj/MyDocument.xib
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compiling /Users/jmarstall/Development/MenuBrain/English.lproj/MyDocument.xib6c93ba7af894b541^e198c17af894b541^---0#0#0#-19%DVTDocumentLocation2@83"file://localhost/Users/jmarstall/Development/MenuBrain/English.lproj/MyDocument.xib0000000000000000^618"CompileXIB English.lproj/MyDocument.xib    cd /Users/jmarstall/Development/MenuBrain    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode44-DP4.app/Contents/Developer/usr/bin/..    /Applications/Xcode44-DP4.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/jmarstall/Development/MenuBrain/build/Debug/MenuBrain.app/Contents/Resources/English.lproj/MyDocument.nib /Users/jmarstall/Development/MenuBrain/English.lproj/MyDocument.xib --sdk /Applications/Xcode44-DP4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk36"2EEAA8F7-7CB6-49E7-9251-4927638B9830-
-
-CCompileXIB /Users/jmarstall/bpxl/menubrain/English.lproj/MainMenu.xib
-s363189731.905590
-e363189731.963677
-r1
-xCompileXIB
-x/Users/jmarstall/bpxl/menubrain/English.lproj/MainMenu.xib
-o/* com.apple.ibtool.document.notices */
-o/Users/jmarstall/bpxl/menubrain/English.lproj/MainMenu.xib:831: note: View is clipping its content [13]
-o/Users/jmarstall/bpxl/menubrain/English.lproj/MainMenu.xib:882: note: View is clipping its content [13]
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection68"Compiling /Users/jmarstall/bpxl/menubrain/English.lproj/MainMenu.xib861be8e3d5a5b541^ccb3f6e3d5a5b541^-39"/* com.apple.ibtool.document.notices */2(21%IDEActivityLogMessage2@28"View is clipping its content-363189731#18446744073709551615#0#-0#-23%DVTTextDocumentLocation3@74"file://localhost/Users/jmarstall/bpxl/menubrain/English.lproj/MainMenu.xib0000000000000000^830#18446744073709551615#830#18446744073709551615#18446744073709551615#0#15"Clipped Content--2@28"View is clipping its content-363189731#18446744073709551615#0#-0#-3@74"file://localhost/Users/jmarstall/bpxl/menubrain/English.lproj/MainMenu.xib0000000000000000^881#18446744073709551615#881#18446744073709551615#18446744073709551615#0#15"Clipped Content--0#0#0#-19%DVTDocumentLocation4@74"file://localhost/Users/jmarstall/bpxl/menubrain/English.lproj/MainMenu.xib0000000000000000^591"CompileXIB English.lproj/MainMenu.xib    cd /Users/jmarstall/bpxl/menubrain    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode45-DP2.app/Contents/Developer/usr/bin/..    /Applications/Xcode45-DP2.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Resources/English.lproj/MainMenu.nib /Users/jmarstall/bpxl/menubrain/English.lproj/MainMenu.xib --sdk /Applications/Xcode45-DP2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk36"E8C47954-5BA3-4554-9DBC-5CBF762A2CEF-
-
-CCompileXIB /Users/jmarstall/bpxl/menubrain/English.lproj/MyDocument.xib
-s363189731.905592
-e363189731.933753
-r1
-xCompileXIB
-x/Users/jmarstall/bpxl/menubrain/English.lproj/MyDocument.xib
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Compiling /Users/jmarstall/bpxl/menubrain/English.lproj/MyDocument.xibdf1ae8e3d5a5b541^2713efe3d5a5b541^---0#0#0#-19%DVTDocumentLocation2@76"file://localhost/Users/jmarstall/bpxl/menubrain/English.lproj/MyDocument.xib0000000000000000^597"CompileXIB English.lproj/MyDocument.xib    cd /Users/jmarstall/bpxl/menubrain    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode45-DP2.app/Contents/Developer/usr/bin/..    /Applications/Xcode45-DP2.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Resources/English.lproj/MyDocument.nib /Users/jmarstall/bpxl/menubrain/English.lproj/MyDocument.xib --sdk /Applications/Xcode45-DP2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk36"79721369-64F9-4574-BADA-FC11B4CA1B77-
-
-CCopyPlistFile /Users/jmarstall/Development/MenuBrain/build/Debug/MenuBrain.app/Contents/Resources/Info.plist Info.plist
-s362084474.728579
-e362084474.735537
-r1
-xCopyPlistFile
-x/Users/jmarstall/Development/MenuBrain/build/Debug/MenuBrain.app/Contents/Resources/Info.plist
-xInfo.plist
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection15"Copy Info.plistfb91ba7af894b541^8c4cbc7af894b541^---0#0#0#-19%DVTDocumentLocation2@65"file://localhost/Users/jmarstall/Development/MenuBrain/Info.plist0000000000000000^256"CopyPlistFile build/Debug/MenuBrain.app/Contents/Resources/Info.plist Info.plist    cd /Users/jmarstall/Development/MenuBrain    builtin-copyPlist --outdir /Users/jmarstall/Development/MenuBrain/build/Debug/MenuBrain.app/Contents/Resources -- Info.plist36"6DED3E08-6B02-4052-9775-9CAC7FA451F5-
-
-CCopyPlistFile /Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Resources/Info.plist Info.plist
-s362085108.230867
-e362085108.235006
-r1
-xCopyPlistFile
-x/Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Resources/Info.plist
-xInfo.plist
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection15"Copy Info.plistb83b3bf4fa94b541^9e293cf4fa94b541^---0#0#0#-19%DVTDocumentLocation2@58"file://localhost/Users/jmarstall/bpxl/menubrain/Info.plist0000000000000000^242"CopyPlistFile build/Debug/MenuBrain.app/Contents/Resources/Info.plist Info.plist    cd /Users/jmarstall/bpxl/menubrain    builtin-copyPlist --outdir /Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Resources -- Info.plist36"83E11BE7-4327-45FB-8598-9A083AFF544C-
-
-CCopyPlistFile /Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Resources/MenuBrain-Info.plist MenuBrain-Info.plist
-s362863582.133115
-e362863582.141880
-r1
-xCopyPlistFile
-x/Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Resources/MenuBrain-Info.plist
-xMenuBrain-Info.plist
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection25"Copy MenuBrain-Info.plistbf2b22dedba0b541^095324dedba0b541^---0#0#0#-19%DVTDocumentLocation2@68"file://localhost/Users/jmarstall/bpxl/menubrain/MenuBrain-Info.plist0000000000000000^272"CopyPlistFile build/Debug/MenuBrain.app/Contents/Resources/MenuBrain-Info.plist MenuBrain-Info.plist    cd /Users/jmarstall/bpxl/menubrain    builtin-copyPlist --outdir /Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Resources -- MenuBrain-Info.plist36"9D7CB64D-1957-409F-B855-FF2F5180A40F-
-
-CCopyStringsFile /Users/jmarstall/Development/MenuBrain/build/Debug/MenuBrain.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
-s362084474.728549
-e362084474.734412
-r1
-xCopyStringsFile
-x/Users/jmarstall/Development/MenuBrain/build/Debug/MenuBrain.app/Contents/Resources/English.lproj/InfoPlist.strings
-xEnglish.lproj/InfoPlist.strings
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection36"Copy English.lproj/InfoPlist.strings4391ba7af894b541^a301bc7af894b541^---0#0#0#-19%DVTDocumentLocation2@86"file://localhost/Users/jmarstall/Development/MenuBrain/English.lproj/InfoPlist.strings0000000000000000^394"CopyStringsFile build/Debug/MenuBrain.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings    cd /Users/jmarstall/Development/MenuBrain    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding UTF-16 --outdir /Users/jmarstall/Development/MenuBrain/build/Debug/MenuBrain.app/Contents/Resources/English.lproj -- English.lproj/InfoPlist.strings36"A9DBF92D-D9AB-4844-ADB7-9E6AD0E4E701-
-
-CCopyStringsFile /Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
-s362085108.230747
-e362085108.233789
-r1
-xCopyStringsFile
-x/Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Resources/English.lproj/InfoPlist.strings
-xEnglish.lproj/InfoPlist.strings
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection36"Copy English.lproj/InfoPlist.strings86373bf4fa94b541^1fda3bf4fa94b541^---0#0#0#-19%DVTDocumentLocation2@79"file://localhost/Users/jmarstall/bpxl/menubrain/English.lproj/InfoPlist.strings0000000000000000^380"CopyStringsFile build/Debug/MenuBrain.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings    cd /Users/jmarstall/bpxl/menubrain    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding UTF-16 --outdir /Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Resources/English.lproj -- English.lproj/InfoPlist.strings36"66E5D3B4-D288-48E6-A075-E2A574135CE0-
-
-CCpResource English.lproj/Credits.rtf build/Debug/MenuBrain.app/Contents/Resources/English.lproj/Credits.rtf
-s362863582.132909
-e362863582.135036
-r1
-xCpResource
-xEnglish.lproj/Credits.rtf
-xbuild/Debug/MenuBrain.app/Contents/Resources/English.lproj/Credits.rtf
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Copy build/Debug/MenuBrain.app/Contents/Resources/English.lproj/Credits.rtfb51622dedba0b541^b49222dedba0b541^---0#0#0#-19%DVTDocumentLocation2@118"file://localhost/Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Resources/English.lproj/Credits.rtf0000000000000000^408"CpResource English.lproj/Credits.rtf build/Debug/MenuBrain.app/Contents/Resources/English.lproj/Credits.rtf    cd /Users/jmarstall/bpxl/menubrain    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/jmarstall/bpxl/menubrain/English.lproj/Credits.rtf /Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Resources/English.lproj36"D2BB7A93-7438-492D-8A67-CC693238FD9F-
-
-CCpResource English.lproj/InfoPlist.strings build/Debug/MenuBrain.app/Contents/Resources/English.lproj/InfoPlist.strings
-r0
-
-CCpResource English.lproj/MainMenu.xib build/Debug/MenuBrain.app/Contents/Resources/English.lproj/MainMenu.xib
-r0
-
-CCpResource English.lproj/MyDocument.xib build/Debug/MenuBrain.app/Contents/Resources/English.lproj/MyDocument.xib
-r0
-
-CCpResource Info.plist build/Debug/MenuBrain.app/Contents/Resources/Info.plist
-r0
-
-CCpResource MenuBrain.icns build/Debug/MenuBrain.app/Contents/Resources/MenuBrain.icns
-s362863582.133082
-e362863582.136201
-r1
-xCpResource
-xMenuBrain.icns
-xbuild/Debug/MenuBrain.app/Contents/Resources/MenuBrain.icns
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection64"Copy build/Debug/MenuBrain.app/Contents/Resources/MenuBrain.icnse52622dedba0b541^a9de22dedba0b541^---0#0#0#-19%DVTDocumentLocation2@107"file://localhost/Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Resources/MenuBrain.icns0000000000000000^361"CpResource MenuBrain.icns build/Debug/MenuBrain.app/Contents/Resources/MenuBrain.icns    cd /Users/jmarstall/bpxl/menubrain    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/jmarstall/bpxl/menubrain/MenuBrain.icns /Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Resources36"43255A11-644C-4A2B-9275-7BEA6CF5AB4A-
-
-CCpResource brain-menulet.png build/Debug/MenuBrain.app/Contents/Resources/brain-menulet.png
-s362863582.133071
-e362863582.138188
-r1
-xCpResource
-xbrain-menulet.png
-xbuild/Debug/MenuBrain.app/Contents/Resources/brain-menulet.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection67"Copy build/Debug/MenuBrain.app/Contents/Resources/brain-menulet.png182722dedba0b541^996123dedba0b541^---0#0#0#-19%DVTDocumentLocation2@110"file://localhost/Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Resources/brain-menulet.png0000000000000000^370"CpResource brain-menulet.png build/Debug/MenuBrain.app/Contents/Resources/brain-menulet.png    cd /Users/jmarstall/bpxl/menubrain    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/jmarstall/bpxl/menubrain/brain-menulet.png /Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Resources36"80AF1174-89A5-4D59-96D4-6CEE1157DC5A-
-
-CCpResource brain-menulet@2x.png build/Debug/MenuBrain.app/Contents/Resources/brain-menulet@2x.png
-s362863582.133125
-e362863582.140460
-r1
-xCpResource
-xbrain-menulet@2x.png
-xbuild/Debug/MenuBrain.app/Contents/Resources/brain-menulet@2x.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Copy build/Debug/MenuBrain.app/Contents/Resources/brain-menulet@2x.png522922dedba0b541^7ff623dedba0b541^---0#0#0#-19%DVTDocumentLocation2@113"file://localhost/Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Resources/brain-menulet@2x.png000000000080d041^385"CpResource "brain-menulet@2x.png" "build/Debug/MenuBrain.app/Contents/Resources/brain-menulet@2x.png"    cd /Users/jmarstall/bpxl/menubrain    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/jmarstall/bpxl/menubrain/brain-menulet@2x.png" /Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Resources36"44FEEFC0-FB88-44D1-AFE6-909A3BADABB7-
-
-CCpResource brain-menulet_on.png build/Debug/MenuBrain.app/Contents/Resources/brain-menulet_on.png
-s362863582.133062
-e362863582.137541
-r1
-xCpResource
-xbrain-menulet_on.png
-xbuild/Debug/MenuBrain.app/Contents/Resources/brain-menulet_on.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Copy build/Debug/MenuBrain.app/Contents/Resources/brain-menulet_on.pngd52622dedba0b541^593623dedba0b541^---0#0#0#-19%DVTDocumentLocation2@113"file://localhost/Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Resources/brain-menulet_on.png0000000000000000^379"CpResource brain-menulet_on.png build/Debug/MenuBrain.app/Contents/Resources/brain-menulet_on.png    cd /Users/jmarstall/bpxl/menubrain    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/jmarstall/bpxl/menubrain/brain-menulet_on.png /Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Resources36"D24597C1-CDCF-4310-A11F-AC571231910F-
-
-CCpResource brain-menulet_on@2x.png build/Debug/MenuBrain.app/Contents/Resources/brain-menulet_on@2x.png
-s362863582.133100
-e362863582.139306
-r1
-xCpResource
-xbrain-menulet_on@2x.png
-xbuild/Debug/MenuBrain.app/Contents/Resources/brain-menulet_on@2x.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Copy build/Debug/MenuBrain.app/Contents/Resources/brain-menulet_on@2x.png4a2722dedba0b541^22ab23dedba0b541^---0#0#0#-19%DVTDocumentLocation2@116"file://localhost/Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Resources/brain-menulet_on@2x.png000000000080d041^394"CpResource "brain-menulet_on@2x.png" "build/Debug/MenuBrain.app/Contents/Resources/brain-menulet_on@2x.png"    cd /Users/jmarstall/bpxl/menubrain    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/jmarstall/bpxl/menubrain/brain-menulet_on@2x.png" /Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Resources36"BFAF44A5-A659-4C25-98A7-DA9807D75CE6-
-
-CLd /Users/jmarstall/Development/MenuBrain/build/Debug/MenuBrain.app/Contents/MacOS/MenuBrain normal x86_64
-s362084475.523239
-e362084475.560407
-r1
-xLd
-x/Users/jmarstall/Development/MenuBrain/build/Debug/MenuBrain.app/Contents/MacOS/MenuBrain
-xnormal
-xx86_64
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Link /Users/jmarstall/Development/MenuBrain/build/Debug/MenuBrain.app/Contents/MacOS/MenuBrain9b01867bf894b541^a3768f7bf894b541^---0#0#0#--786"Ld build/Debug/MenuBrain.app/Contents/MacOS/MenuBrain normal x86_64    cd /Users/jmarstall/Development/MenuBrain    setenv MACOSX_DEPLOYMENT_TARGET 10.7    /Applications/Xcode44-DP4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode44-DP4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -L/Users/jmarstall/Development/MenuBrain/build/Debug -F/Users/jmarstall/Development/MenuBrain/build/Debug -filelist /Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/MenuBrain.LinkFileList -mmacosx-version-min=10.7 -fobjc-link-runtime -framework Cocoa -o /Users/jmarstall/Development/MenuBrain/build/Debug/MenuBrain.app/Contents/MacOS/MenuBrain36"F5727114-24FA-4E26-B52A-DC430C3ABF64-
-
-CLd /Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/MacOS/MenuBrain normal x86_64
-s363189732.804933
-e363189733.015953
-r1
-xLd
-x/Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/MacOS/MenuBrain
-xnormal
-xx86_64
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Link /Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/MacOS/MenuBrain5724cee4d5a5b541^ecdc08e5d5a5b541^---0#0#0#--751"Ld build/Debug/MenuBrain.app/Contents/MacOS/MenuBrain normal x86_64    cd /Users/jmarstall/bpxl/menubrain    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Applications/Xcode45-DP2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode45-DP2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -L/Users/jmarstall/bpxl/menubrain/build/Debug -F/Users/jmarstall/bpxl/menubrain/build/Debug -filelist /Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/Objects-normal/x86_64/MenuBrain.LinkFileList -mmacosx-version-min=10.6 -fobjc-link-runtime -framework Cocoa -o /Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/MacOS/MenuBrain36"445CD886-94E5-4A72-B2B8-ACE0742B718D-
-
-CProcessInfoPlistFile /Users/jmarstall/Development/MenuBrain/build/Debug/MenuBrain.app/Contents/Info.plist MenuBrain-Info.plist
-s362084474.718014
-e362084474.720536
-r1
-xProcessInfoPlistFile
-x/Users/jmarstall/Development/MenuBrain/build/Debug/MenuBrain.app/Contents/Info.plist
-xMenuBrain-Info.plist
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection28"Process MenuBrain-Info.plist66d9b77af894b541^338bb87af894b541^---0#0#0#-19%DVTDocumentLocation2@75"file://localhost/Users/jmarstall/Development/MenuBrain/MenuBrain-Info.plist0000000000000000^404"ProcessInfoPlistFile build/Debug/MenuBrain.app/Contents/Info.plist MenuBrain-Info.plist    cd /Users/jmarstall/Development/MenuBrain    builtin-infoPlistUtility MenuBrain-Info.plist -genpkginfo /Users/jmarstall/Development/MenuBrain/build/Debug/MenuBrain.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/jmarstall/Development/MenuBrain/build/Debug/MenuBrain.app/Contents/Info.plist36"223A8E2A-7FD3-4C1C-919B-D77C853FB969-
-
-CProcessInfoPlistFile /Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Info.plist MenuBrain-Info.plist
-s363189731.873167
-e363189731.897625
-r1
-xProcessInfoPlistFile
-x/Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Info.plist
-xMenuBrain-Info.plist
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection28"Process MenuBrain-Info.plist05a6dfe3d5a5b541^1006e6e3d5a5b541^---0#0#0#-19%DVTDocumentLocation2@68"file://localhost/Users/jmarstall/bpxl/menubrain/MenuBrain-Info.plist0000000000000000^383"ProcessInfoPlistFile build/Debug/MenuBrain.app/Contents/Info.plist MenuBrain-Info.plist    cd /Users/jmarstall/bpxl/menubrain    builtin-infoPlistUtility MenuBrain-Info.plist -genpkginfo /Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app/Contents/Info.plist36"EEB2A7EE-C2EF-4D65-81E0-A252C9470BA0-
-
-CProcessPCH /Users/jmarstall/Library/Developer/Xcode/DerivedData/MenuBrain-cwkmvpdqdlouhxeioiltpuqapjzr/Index/PrecompiledHeaders/MenuBrain_Prefix-bqnahudmhyekdkbyhvtokqjskdhg_ast/MenuBrain_Prefix.pch.pth MenuBrain_Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
-r0
-
-CProcessPCH /Users/jmarstall/Library/Developer/Xcode/DerivedData/MenuBrain-dvpuqsgmzyhqybfdombifdpwjjzc/Index/PrecompiledHeaders/MenuBrain_Prefix-addrwdwemywoeicieugqlwqkwtof_ast/MenuBrain_Prefix.pch.pth MenuBrain_Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
-r0
-
-CProcessPCH /Users/jmarstall/Library/Developer/Xcode/DerivedData/MenuBrain-dvpuqsgmzyhqybfdombifdpwjjzc/Index/PrecompiledHeaders/MenuBrain_Prefix-duzqimxqkkkpjkhdzwiwbjoyypue_ast/MenuBrain_Prefix.pch.pth MenuBrain_Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
-r0
-
-CProcessPCH /Users/jmarstall/Library/Developer/Xcode/DerivedData/MenuBrain-dvpuqsgmzyhqybfdombifdpwjjzc/Index/PrecompiledHeaders/MenuBrain_Prefix-dzujvggasaqqieakaeojyyavtwvp_ast/MenuBrain_Prefix.pch.pth MenuBrain_Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
-r0
-
-CProcessPCH /var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-adijilcfdlducoagiabnxsspmfhj/MenuBrain_Prefix.pch.pth MenuBrain_Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s363189731.971734
-e363189732.670496
-r1
-xProcessPCH
-x/var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-adijilcfdlducoagiabnxsspmfhj/MenuBrain_Prefix.pch.pth
-xMenuBrain_Prefix.pch
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection31"Precompile MenuBrain_Prefix.pch6de2f8e3d5a5b541^82a8abe4d5a5b541^---0#0#0#-19%DVTDocumentLocation2@68"file://localhost/Users/jmarstall/bpxl/menubrain/MenuBrain_Prefix.pch0000000000000000^2920"ProcessPCH /var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-adijilcfdlducoagiabnxsspmfhj/MenuBrain_Prefix.pch.pth MenuBrain_Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jmarstall/bpxl/menubrain    setenv LANG en_US.US-ASCII    /Applications/Xcode45-DP2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch x86_64 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode45-DP2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -fvisibility=hidden -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-generated-files.hmap -I/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-own-target-headers.hmap -I/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-all-target-headers.hmap -iquote /Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-project-headers.hmap -I/Users/jmarstall/bpxl/menubrain/build/Debug/include -I/Applications/Xcode45-DP2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/DerivedSources/x86_64 -I/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/DerivedSources -F/Users/jmarstall/bpxl/menubrain/build/Debug --serialize-diagnostics /var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-adijilcfdlducoagiabnxsspmfhj/MenuBrain_Prefix.pch.dia -c /Users/jmarstall/bpxl/menubrain/MenuBrain_Prefix.pch -o /var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-adijilcfdlducoagiabnxsspmfhj/MenuBrain_Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-adijilcfdlducoagiabnxsspmfhj/MenuBrain_Prefix.pch.d36"1281C325-F042-4EF5-B59E-E6B281FD2CF8-
-
-CProcessPCH /var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-bitgdbuptqrxyifyuuzndmbmuila/MenuBrain_Prefix.pch.pth MenuBrain_Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s362085108.653482
-e362085109.260986
-r1
-xProcessPCH
-x/var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-bitgdbuptqrxyifyuuzndmbmuila/MenuBrain_Prefix.pch.pth
-xMenuBrain_Prefix.pch
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection31"Precompile MenuBrain_Prefix.pch5a68a7f4fa94b541^facf42f5fa94b541^---0#0#0#-19%DVTDocumentLocation2@68"file://localhost/Users/jmarstall/bpxl/menubrain/MenuBrain_Prefix.pch0000000000000000^2799"ProcessPCH /var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-bitgdbuptqrxyifyuuzndmbmuila/MenuBrain_Prefix.pch.pth MenuBrain_Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jmarstall/bpxl/menubrain    setenv LANG en_US.US-ASCII    /Applications/Xcode44-DP4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch x86_64 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode44-DP4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-generated-files.hmap -I/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-own-target-headers.hmap -I/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-all-target-headers.hmap -iquote /Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-project-headers.hmap -I/Users/jmarstall/bpxl/menubrain/build/Debug/include -I/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/DerivedSources/x86_64 -I/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/DerivedSources -F/Users/jmarstall/bpxl/menubrain/build/Debug --serialize-diagnostics /var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-bitgdbuptqrxyifyuuzndmbmuila/MenuBrain_Prefix.pch.dia -c /Users/jmarstall/bpxl/menubrain/MenuBrain_Prefix.pch -o /var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-bitgdbuptqrxyifyuuzndmbmuila/MenuBrain_Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-bitgdbuptqrxyifyuuzndmbmuila/MenuBrain_Prefix.pch.d36"37CF4672-2E00-4CB2-A5E2-43EBED6D83C0-
-
-CProcessPCH /var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-doyahfhdmlzedcauchlbrsysumks/MenuBrain_Prefix.pch.pth MenuBrain_Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s362863582.195584
-e362863582.880235
-r1
-xProcessPCH
-x/var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-doyahfhdmlzedcauchlbrsysumks/MenuBrain_Prefix.pch.pth
-xMenuBrain_Prefix.pch
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection31"Precompile MenuBrain_Prefix.pchae2b32dedba0b541^d256e1dedba0b541^---0#0#0#-19%DVTDocumentLocation2@68"file://localhost/Users/jmarstall/bpxl/menubrain/MenuBrain_Prefix.pch0000000000000000^2920"ProcessPCH /var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-doyahfhdmlzedcauchlbrsysumks/MenuBrain_Prefix.pch.pth MenuBrain_Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jmarstall/bpxl/menubrain    setenv LANG en_US.US-ASCII    /Applications/Xcode44-DP6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch x86_64 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode44-DP6.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -fvisibility=hidden -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-generated-files.hmap -I/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-own-target-headers.hmap -I/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-all-target-headers.hmap -iquote /Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-project-headers.hmap -I/Users/jmarstall/bpxl/menubrain/build/Debug/include -I/Applications/Xcode44-DP6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/DerivedSources/x86_64 -I/Users/jmarstall/bpxl/menubrain/build/MenuBrain.build/Debug/MenuBrain.build/DerivedSources -F/Users/jmarstall/bpxl/menubrain/build/Debug --serialize-diagnostics /var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-doyahfhdmlzedcauchlbrsysumks/MenuBrain_Prefix.pch.dia -c /Users/jmarstall/bpxl/menubrain/MenuBrain_Prefix.pch -o /var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-doyahfhdmlzedcauchlbrsysumks/MenuBrain_Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-doyahfhdmlzedcauchlbrsysumks/MenuBrain_Prefix.pch.d36"7FF9B78B-1530-480E-A0B5-DFAFD14BFF41-
-
-CProcessPCH /var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-fxuacvhofmugsecvhkwqkgtizaen/MenuBrain_Prefix.pch.pth MenuBrain_Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s362084474.775967
-e362084475.386193
-r1
-xProcessPCH
-x/var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-fxuacvhofmugsecvhkwqkgtizaen/MenuBrain_Prefix.pch.pth
-xMenuBrain_Prefix.pch
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection31"Precompile MenuBrain_Prefix.pch5ebdc67af894b541^f0dd627bf894b541^---0#0#0#-19%DVTDocumentLocation2@75"file://localhost/Users/jmarstall/Development/MenuBrain/MenuBrain_Prefix.pch0000000000000000^2869"ProcessPCH /var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-fxuacvhofmugsecvhkwqkgtizaen/MenuBrain_Prefix.pch.pth MenuBrain_Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jmarstall/Development/MenuBrain    setenv LANG en_US.US-ASCII    /Applications/Xcode44-DP4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch x86_64 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode44-DP4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.7 -g -fvisibility=hidden -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -iquote /Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-generated-files.hmap -I/Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-own-target-headers.hmap -I/Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-all-target-headers.hmap -iquote /Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/MenuBrain-project-headers.hmap -I/Users/jmarstall/Development/MenuBrain/build/Debug/include -I/Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/DerivedSources/x86_64 -I/Users/jmarstall/Development/MenuBrain/build/MenuBrain.build/Debug/MenuBrain.build/DerivedSources -F/Users/jmarstall/Development/MenuBrain/build/Debug --serialize-diagnostics /var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-fxuacvhofmugsecvhkwqkgtizaen/MenuBrain_Prefix.pch.dia -c /Users/jmarstall/Development/MenuBrain/MenuBrain_Prefix.pch -o /var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-fxuacvhofmugsecvhkwqkgtizaen/MenuBrain_Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/rr/2ssf8y2m8v59yx008k8xdrtr0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/MenuBrain_Prefix-fxuacvhofmugsecvhkwqkgtizaen/MenuBrain_Prefix.pch.d36"12052B0E-3DFB-4A45-8576-3D8BA352DAD1-
-
-CTouch /Users/jmarstall/Development/MenuBrain/build/Debug/MenuBrain.app
-s362084475.568465
-e362084475.573624
-r1
-xTouch
-x/Users/jmarstall/Development/MenuBrain/build/Debug/MenuBrain.app
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Touch /Users/jmarstall/Development/MenuBrain/build/Debug/MenuBrain.app5c90917bf894b541^98da927bf894b541^---0#0#0#--165"Touch build/Debug/MenuBrain.app    cd /Users/jmarstall/Development/MenuBrain    /usr/bin/touch -c /Users/jmarstall/Development/MenuBrain/build/Debug/MenuBrain.app36"98E06E1F-2ED9-4DC6-A16D-BE2F93888EF0-
-
-CTouch /Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app
-s363189733.023941
-e363189733.030527
-r1
-xTouch
-x/Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection63"Touch /Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.appc32e06e5d5a5b541^b5e108e5d5a5b541^---0#0#0#--151"Touch build/Debug/MenuBrain.app    cd /Users/jmarstall/bpxl/menubrain    /usr/bin/touch -c /Users/jmarstall/bpxl/menubrain/build/Debug/MenuBrain.app36"D387647F-0C6B-4C71-8109-9C32515C34B3-
-
