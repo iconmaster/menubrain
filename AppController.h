@@ -15,7 +15,6 @@
 	IBOutlet NSTableView *tableView;
 	IBOutlet NSTextField *inputField;
 	NSMutableArray *stringArray;
-    NSString *annotationSeparator;
 	
 	IBOutlet NSStatusItem *statusItem;
 	IBOutlet NSMenu *statusMenu;
@@ -25,6 +24,8 @@
 	BOOL firstRun;
 
 }
+
+@property (nonatomic, copy) NSString *annotationSeparator;
 
 - (IBAction)addString:(id)sender;
 - (IBAction)removeString:(id)sender;
