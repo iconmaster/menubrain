@@ -35,19 +35,19 @@
     //Create the NSStatusBar and set its length
     statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength];
     
-    //Sets the images in our NSStatusItem
-    [statusItem setImage:[NSImage imageNamed:@"menubarIcon"]];
-    [statusItem setAlternateImage:[NSImage imageNamed:@"menubarIconActive"]];
+    //Sets the image on the status item's button. A template image adapts
+    //automatically to light/dark menu bars and to the highlighted state.
+    NSImage *menubarImage = [NSImage imageNamed:@"menubarIcon"];
+    menubarImage.template = YES;
+    statusItem.button.image = menubarImage;
     
     //Tells the NSStatusItem what menu to load
     [statusItem setMenu:statusMenu];
-    //Sets the tooptip for our item
-    [statusItem setToolTip:@"MenuBrain"];
-    //Enables highlighting
-    [statusItem setHighlightMode:YES];
+    //Sets the tooltip for our item
+    statusItem.button.toolTip = @"MenuBrain";
     
     
-    [tableView registerForDraggedTypes: [NSArray arrayWithObject:NSStringPboardType] ];
+    [tableView registerForDraggedTypes: [NSArray arrayWithObject:NSPasteboardTypeString] ];
     
     //Determine if a MenuBrain file already exists
     
@@ -167,8 +167,8 @@
             NSLog(@"this is a simple string");
             contentString = contents;
             NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
-            [pasteboard declareTypes:[NSArray arrayWithObject:NSStringPboardType] owner:nil];
-            [pasteboard setString:contentString forType:NSStringPboardType];
+            [pasteboard declareTypes:[NSArray arrayWithObject:NSPasteboardTypeString] owner:nil];
+            [pasteboard setString:contentString forType:NSPasteboardTypeString];
             return;
         }
     }
@@ -197,8 +197,8 @@
             if ([self isURL:contentString] == NO) {
                 NSLog(@"this is a simple string with annotation");
                 NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
-                [pasteboard declareTypes:[NSArray arrayWithObject:NSStringPboardType] owner:nil];
-                [pasteboard setString:contentString forType:NSStringPboardType];
+                [pasteboard declareTypes:[NSArray arrayWithObject:NSPasteboardTypeString] owner:nil];
+                [pasteboard setString:contentString forType:NSPasteboardTypeString];
                 return;
             }
         }
@@ -209,8 +209,8 @@
         if ([contents hasPrefix:@"ftp://"] == YES) {
             NSLog(@"this is a non-launching URL");
             NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
-            [pasteboard declareTypes:[NSArray arrayWithObject:NSStringPboardType] owner:nil];
-            [pasteboard setString:contents forType:NSStringPboardType];
+            [pasteboard declareTypes:[NSArray arrayWithObject:NSPasteboardTypeString] owner:nil];
+            [pasteboard setString:contents forType:NSPasteboardTypeString];
             return;
         }
     }
@@ -243,8 +243,8 @@
             if ([contentString hasPrefix:@"ftp://"]) {
                 NSLog(@"this is an FTP address with annotation");
                 NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
-                [pasteboard declareTypes:[NSArray arrayWithObject:NSStringPboardType] owner:nil];
-                [pasteboard setString:contentString forType:NSStringPboardType];
+                [pasteboard declareTypes:[NSArray arrayWithObject:NSPasteboardTypeString] owner:nil];
+                [pasteboard setString:contentString forType:NSPasteboardTypeString];
                 return;
             } else {
                 [self sendURL:contentString];
@@ -355,14 +355,14 @@
         URL = [NSURL URLWithString:validURL];
     }
     
-    BOOL optionKeyIsDown = ([NSEvent modifierFlags] & NSAlternateKeyMask) == NSAlternateKeyMask;
+    BOOL optionKeyIsDown = ([NSEvent modifierFlags] & NSEventModifierFlagOption) == NSEventModifierFlagOption;
     if (optionKeyIsDown)
     {
         // Copy to clipboard
         NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
-        [pasteboard declareTypes:[NSArray arrayWithObjects:NSStringPboardType, NSURLPboardType, nil] owner:nil];
-        [pasteboard setString:[URL absoluteString] forType:NSStringPboardType];
-        [pasteboard setString:[URL absoluteString] forType:NSURLPboardType];
+        [pasteboard declareTypes:[NSArray arrayWithObjects:NSPasteboardTypeString, NSPasteboardTypeURL, nil] owner:nil];
+        [pasteboard setString:[URL absoluteString] forType:NSPasteboardTypeString];
+        [pasteboard setString:[URL absoluteString] forType:NSPasteboardTypeURL];
     }
     else {
         // Send the url
@@ -590,12 +590,19 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
 
 - (BOOL)tableView:(NSTableView *)tv writeRowsWithIndexes:(NSIndexSet *)rowIndexes toPasteboard:(NSPasteboard*)pboard {
     // Copy the row numbers to the pasteboard.
-    NSData *zNSIndexSetData = [NSKeyedArchiver archivedDataWithRootObject:rowIndexes];
+    NSError *error = nil;
+    NSData *zNSIndexSetData = [NSKeyedArchiver archivedDataWithRootObject:rowIndexes
+                                                   requiringSecureCoding:YES
+                                                                   error:&error];
+    if (zNSIndexSetData == nil) {
+        NSLog(@"Failed to archive drag row indexes: %@", error);
+        return NO;
+    }
     
-    [pboard declareTypes:[NSArray arrayWithObject:NSStringPboardType] owner:self];
+    [pboard declareTypes:[NSArray arrayWithObject:NSPasteboardTypeString] owner:self];
     
     
-    [pboard setData:zNSIndexSetData forType:NSStringPboardType];
+    [pboard setData:zNSIndexSetData forType:NSPasteboardTypeString];
     
     return YES;
 }
@@ -616,9 +623,16 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
     }
     
     NSPasteboard* pboard = [info draggingPasteboard];
-    NSData* rowData = [pboard dataForType:NSStringPboardType];
+    NSData* rowData = [pboard dataForType:NSPasteboardTypeString];
     // we need to re-locate where in stringArray this string was
-    NSIndexSet* rowIndexes = [NSKeyedUnarchiver unarchiveObjectWithData:rowData];
+    NSError* error = nil;
+    NSIndexSet* rowIndexes = [NSKeyedUnarchiver unarchivedObjectOfClass:[NSIndexSet class]
+                                                              fromData:rowData
+                                                                 error:&error];
+    if (rowIndexes == nil) {
+        NSLog(@"Failed to unarchive drag row indexes: %@", error);
+        return NO;
+    }
     NSInteger dragRow = [rowIndexes firstIndex];
     // dragRow is the former index of the dragged string
     NSString* draggedString = [stringArray objectAtIndex:dragRow];
@@ -671,18 +685,32 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
 
 - (void)saveDataToDisk { 
     NSString * path = [self pathForDataFile];
-    //NSMutableDictionary * rootObject;
-    //rootObject = [NSMutableDictionary dictionary];
-    //[rootObject setValue: stringArray forKey:@"menubraindata"];
-    [NSKeyedArchiver archiveRootObject: stringArray toFile: path];
+    NSError *error = nil;
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:stringArray
+                                        requiringSecureCoding:YES
+                                                        error:&error];
+    if (data == nil) {
+        NSLog(@"Failed to archive data: %@", error);
+        return;
+    }
+    if (![data writeToFile:path options:NSDataWritingAtomic error:&error]) {
+        NSLog(@"Failed to write data file: %@", error);
+    }
 } 
 
 - (void)loadDataFromDisk {
     if (firstRun == NO) {
         NSString *path = [self pathForDataFile];
-        NSMutableArray *rootObject;
-        rootObject = [[NSMutableArray alloc] init];
-        rootObject = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+        NSData *data = [NSData dataWithContentsOfFile:path];
+        NSArray *rootObject = nil;
+        if (data != nil) {
+            NSSet *allowedClasses = [NSSet setWithObjects:[NSArray class], [NSMutableArray class], [NSString class], nil];
+            NSError *error = nil;
+            rootObject = [NSKeyedUnarchiver unarchivedObjectOfClasses:allowedClasses fromData:data error:&error];
+            if (rootObject == nil) {
+                NSLog(@"Failed to unarchive data file: %@", error);
+            }
+        }
         stringArray = [[NSMutableArray alloc] init];
         //stringArray = [[stringArray arrayByAddingObjectsFromArray:rootObject]retain];
         NSInteger i;
@@ -708,8 +736,8 @@ userData:(NSString *)data error:(NSString **)error {
     NSArray *types = [pboard types];
     NSString *selectionString = @"";
     
-    if ([types containsObject:NSStringPboardType]){
-        selectionString = [pboard stringForType:NSStringPboardType];
+    if ([types containsObject:NSPasteboardTypeString]){
+        selectionString = [pboard stringForType:NSPasteboardTypeString];
         NSLog(@"%@",selectionString);
         [self addStringViaService:selectionString];
         return;
